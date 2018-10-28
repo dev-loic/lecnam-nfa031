@@ -17,7 +17,7 @@ public class Conversion {
 		sc.close();
 	}
 
-	// Rq : ici si vous voulez vous limitez à une précision à 2 chiffres après la virgule
+	// Rq : Vous pouvez vous limiter à une précision à 2 chiffres après la virgule.
 	// Pour ce faire, vous pouvez utiliser Math.round par exemple, qui arrondit le nombre précisé
 	// en argument. Si vous voulez garder 2 chiffres après la virgule (2 décimales) pour le nombre a,
 	// par exemple, vous pouvez écrire : Math.round(a*100)/100. 
