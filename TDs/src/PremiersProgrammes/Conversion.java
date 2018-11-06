@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Conversion {
 	
 	public static void main(String [] args) { 
-		double sommeEuros=0, sommeFrancs=0;
+		double sommeEuros=0.0, sommeFrancs=0.0;
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Somme en euros?");

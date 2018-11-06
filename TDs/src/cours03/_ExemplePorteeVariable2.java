@@ -17,7 +17,7 @@ public class _ExemplePorteeVariable2 {
 				System.out.println("j="+j+" | b="+b);
 				System.out.println("k="+k+" | c="+c);
 			}
-			System.out.println("i="+i+" | a="+a);
+			System.out.println("i+="+i+" | a="+a);
 			System.out.println("j="+j+" | b="+b);
 			//System.out.printn("k="+k+" | c="+c);
 		}
