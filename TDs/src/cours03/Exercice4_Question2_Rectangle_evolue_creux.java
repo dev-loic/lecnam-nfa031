@@ -29,7 +29,7 @@ public class Exercice4_Question2_Rectangle_evolue_creux {
 		// Puis on affiche successivement les lignes		
 		for (int k=0;k<hauteur;k++) 
 		{
-			if ( k==0 || hauteur-1==k )
+			if ( k==0 || k==hauteur-1 )
 			{
 				System.out.println(patternLignesExtreme);
 			}

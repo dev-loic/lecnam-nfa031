@@ -10,14 +10,12 @@ public class Exercice4_Question2_RectangleCreux {
 		System.out.println("Combien de lignes d'étoiles souhaitez-vous ?");
 		longueur = sc.nextInt();
 		
-		System.out.println("*****");
-		
-		for (int i=1; i<longueur-1; i++) 
+		for (int i=0; i<longueur; i++) 
 		{
-			System.out.println("*   *");
+			if(i==0 || i==longueur-1) System.out.println("*****");
+			else System.out.println("*   *");
 		} 
 		
-		System.out.println("*****");
 		sc.close();
 	}
 }
