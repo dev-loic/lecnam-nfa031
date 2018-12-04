@@ -1,4 +1,4 @@
-package cours06;
+package TD6;
 
 public class TestAffectationTableaux {
 
