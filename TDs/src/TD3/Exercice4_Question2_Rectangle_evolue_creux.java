@@ -1,4 +1,4 @@
-package cours03;
+package TD3;
 
 import java.util.Scanner;
 

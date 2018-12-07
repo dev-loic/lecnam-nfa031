@@ -1,4 +1,4 @@
-package cours04;
+package TD4;
 
 // Point sur les unsigned int introduit en Java à partir de JAVA8
 // Ne vous prenez pas la tête avec cette notion si ça vous paraît obscur, vous ne serez jamais interroger 

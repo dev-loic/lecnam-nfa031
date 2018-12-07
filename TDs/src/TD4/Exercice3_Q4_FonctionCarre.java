@@ -1,4 +1,4 @@
-package cours04;
+package TD4;
 
 public class Exercice3_Q4_FonctionCarre {
 

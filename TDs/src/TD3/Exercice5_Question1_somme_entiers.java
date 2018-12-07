@@ -1,4 +1,4 @@
-package cours03;
+package TD3;
 
 public class Exercice5_Question1_somme_entiers {
 

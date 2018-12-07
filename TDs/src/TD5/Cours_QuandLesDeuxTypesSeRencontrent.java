@@ -1,4 +1,4 @@
-package cours05;
+package TD5;
 
 public class Cours_QuandLesDeuxTypesSeRencontrent {
 
