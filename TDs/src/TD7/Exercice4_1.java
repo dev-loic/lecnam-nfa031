@@ -19,10 +19,9 @@ public class Exercice4_1 {
 		
 		// Nb de caractères à ajouter + Indice où il souhaite ajouter ces valeurs
 		System.out.print("Combien de caractères souhaitez-vous ajouter ? ");
-		nbToAdd = sc.nextInt();
+		nbToAdd = Integer.parseInt(sc.nextLine());
 		System.out.print("Où souhaitez-vous les ajouter ? ");
-		indexToAdd = sc.nextInt();
-		sc.nextLine();
+		indexToAdd = Integer.parseInt(sc.nextLine());
 		
 		// Création du nouveau tableau
 		newSize = initialSize+nbToAdd;
