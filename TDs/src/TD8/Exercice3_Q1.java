@@ -25,6 +25,7 @@ public class Exercice3_Q1 {
 					if(valuePixel<0 || valuePixel>255)
 					{
 						System.out.println("La valeur du pixel doit être comprise en 0 et 255, recommencez.");
+						continue;
 					}
 					image[iX][iY]=valuePixel;
 					correctValue=true;
