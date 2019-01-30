@@ -1,4 +1,4 @@
-package DM;
+package Projet;
 
 public class RandomMastermind {
 

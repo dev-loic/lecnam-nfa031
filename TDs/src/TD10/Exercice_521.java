@@ -13,25 +13,25 @@ public class Exercice_521 {
 		System.out.println("n=10 --> attendu : 385 | calculé : "+ sommeCarresRecursif(n3));
 	}
 	
+	// 0^2 + 1^2 + 2^2 + 3^2
+	// 0^2 + 1^2 + 2^2
+	// 0^2 + 1^2
+	// 0^2	
 	static int sommeCarresRecursif (int n)
 	{
-		int somme = 0;
-		
+		int somme = 0;		
 		if (n==0) somme = 0;
-		else somme = sommeCarresRecursif(n-1) + n*n;
-		
+		else somme = sommeCarresRecursif(n-1) + n*n;		
 		return somme;
 	}
 	
 	static int sommeCarresIteratif (int n)
 	{
-		int somme = 0, i=0;
-		
+		int somme = 0, i=0;	
 		for (i=0;i<=n;i++)
 		{
 			somme+=i*i;
-		}
-		
+		}	
 		return somme;
 	}
 
