@@ -13,8 +13,7 @@ public class Exercice3_Q3_Puissance {
 		System.out.print("Saisissez y : ");
 		y = sc.nextInt();
 
-		while(count<y)
-		{
+		while(count<y) {
 			result=result*x;
 			count++;
 		}

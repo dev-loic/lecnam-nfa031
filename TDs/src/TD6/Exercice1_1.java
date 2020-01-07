@@ -13,8 +13,7 @@ public class Exercice1_1 {
 		System.out.print("Saisissez un nombre à rechercher : ");
 		nbToFind = sc.nextInt();
 		
-		for (i=0;i<sizeTab;i++)
-		{
+		for (i=0;i<sizeTab;i++) {
 			// on se contente ici de valuer un booléen si nbToFind est dans la tableau
 			// la boucle for poursuit quand même son exécution après avoir trouvé
 			// nbToFind

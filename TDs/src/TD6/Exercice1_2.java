@@ -12,8 +12,7 @@ public class Exercice1_2 {
 		System.out.print("Saisissez un nombre à rechercher : ");
 		nbToFind = sc.nextInt();
 		
-		for (i=0;i<sizeTab;i++)
-		{
+		for (i=0;i<sizeTab;i++) {
 			// Plus besoin de booléen, si indexNbToFind change de sa valeur initiale,
 			// On sait que nbToFind a été trouvé
 			// Remarquez que s'il est trouvé plusieurs fois, 

@@ -13,14 +13,12 @@ public class Exercice2_Rectangle {
 		dimension = sc.nextInt();
 		
 		// On construit la ligne
-		for (i=0;i<dimension;i++)
-		{
+		for (i=0;i<dimension;i++) {
 			patternLigne+="*";
 		}
 		
 		// On affiche les lignes 
-		for (j=0;j<dimension;j++)
-		{
+		for (j=0;j<dimension;j++) {
 			System.out.println(patternLigne);
 		}	
 		sc.close();
