@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Exercice1 {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		int higherIndex = 0, somme = 0, i = 0 ; 
 		int [] tab;
-		Scanner sc = new Scanner(System.in);
 		
 		// Saisie utilisateur
 		System.out.print("Saisissez le plus grand index : ");
@@ -19,18 +19,15 @@ public class Exercice1 {
 		tab = new int[higherIndex+1]; 
 
 		// on remplit les cas
-		for (i=0;i<=higherIndex;i++)
-		{
+		for (i=0;i<=higherIndex;i++) {
 			somme+=i;
 			tab[i]=somme;
 		}
 		
 		// On affiche le tableau
-		for (i=0;i<=higherIndex;i++)
-		{
+		for (i=0;i<=higherIndex;i++) {
 			System.out.print(tab[i]+" | ");
 		}
-		// Pour clore le Scanner
 		sc.close();
 	}
 

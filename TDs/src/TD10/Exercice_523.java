@@ -11,7 +11,9 @@ public class Exercice_523 {
 
 		System.out.print("Saisissez la dimension souhaitée : ");
 		N = Integer.parseInt(sc.nextLine());
-		if (N<=0) System.out.println("Le nombre de ligne n'est pas correct !");
+		if (N<=0) {
+			System.out.println("Le nombre de ligne n'est pas correct !");
+		}
 		 
 		// On construit le table du sapin
 		resultTriangleTable=insertTriangleIntoTable(N);
@@ -34,32 +36,26 @@ public class Exercice_523 {
 		sc.close();
 	}
 	
-	static char [][] insertTriangleIntoTable (int N)
-	{
+	static char [][] insertTriangleIntoTable (int N) {
 		char [][] triangleTable = new char[N][2*N-1];
 		int iLigne=0, iColonne=0;
-		
-		for (iLigne=0;iLigne<N;iLigne++)
-		{
-			for (iColonne=0;iColonne<2*N-1;iColonne++)
-			{
-				if (iColonne>=(N-1)-iLigne && iColonne<=(N-1)+iLigne) triangleTable[iLigne][iColonne]='*';
-				else triangleTable[iLigne][iColonne]=' ';
+		for (iLigne=0;iLigne<N;iLigne++) {
+			for (iColonne=0;iColonne<2*N-1;iColonne++) {
+				if (iColonne>=(N-1)-iLigne && iColonne<=(N-1)+iLigne) {
+					triangleTable[iLigne][iColonne]='*';
+				} else {
+					triangleTable[iLigne][iColonne]=' ';
+				}
 			}
-		}	
-
+		}
 		return triangleTable;
 	}
 	
 	// Parcours classique
-	static void afficherPointeEnHaut(char [][] tabDuSapin)
-	{
+	static void afficherPointeEnHaut(char [][] tabDuSapin) {
 		int iLigne=0, iColonne=0, sizeLignes=tabDuSapin.length, sizeColonnes=tabDuSapin[0].length;
-		
-		for (iLigne=0;iLigne<sizeLignes;iLigne++)
-		{
-			for (iColonne=0;iColonne<sizeColonnes;iColonne++)
-			{
+		for (iLigne=0;iLigne<sizeLignes;iLigne++) {
+			for (iColonne=0;iColonne<sizeColonnes;iColonne++) {
 				System.out.print(tabDuSapin[iLigne][iColonne]+ " ");
 			}
 			System.out.println();
@@ -67,34 +63,24 @@ public class Exercice_523 {
 	}
 	
 	// Il s'agit de parcourir les colonnes dans un premier temps et pour chaque colonne les lignes à l'envers 
-	static void afficherPointeADroite(char [][] tabDuSapin)
-	{
+	static void afficherPointeADroite(char [][] tabDuSapin) {
 		int iLigne=0, iColonne=0, sizeLignes=tabDuSapin.length, sizeColonnes=tabDuSapin[0].length;
-		
-		for (iColonne=0;iColonne<sizeColonnes;iColonne++)
-		{
-			for (iLigne=sizeLignes-1;iLigne>=0;iLigne--)
-			{
+		for (iColonne=0;iColonne<sizeColonnes;iColonne++) {
+			for (iLigne=sizeLignes-1;iLigne>=0;iLigne--) {
 				System.out.print(tabDuSapin[iLigne][iColonne]+ " ");
 			}
 			System.out.println();
 		}
-
 	}
 	
 	// Idem que le premier mais on parcourt les lignes à l'envers
-	static void afficherPointeEnBas(char [][] tabDuSapin)
-	{
+	static void afficherPointeEnBas(char [][] tabDuSapin) {
 		int iLigne=0, iColonne=0, sizeLignes=tabDuSapin.length, sizeColonnes=tabDuSapin[0].length;
-		
-		for (iLigne=sizeLignes-1;iLigne>=0;iLigne--)
-		{
-			for (iColonne=0;iColonne<sizeColonnes;iColonne++)
-			{
+		for (iLigne=sizeLignes-1;iLigne>=0;iLigne--) {
+			for (iColonne=0;iColonne<sizeColonnes;iColonne++) {
 				System.out.print(tabDuSapin[iLigne][iColonne]+ " ");
 			}
 			System.out.println();
 		}
 	}
-
 }

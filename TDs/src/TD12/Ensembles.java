@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 public class Ensembles {
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		// on crée 2 sets {1,2,3} et {3,4,5}
 		ArrayList<Integer> set1 = createSingleton(1);
 		addElem(2,set1);
@@ -44,61 +43,54 @@ public class Ensembles {
 		System.out.println(nbSetElems(intersectionSet));
 	}
 	
-	static ArrayList<Integer> createSingleton(int iElem)
-	{
+	static ArrayList<Integer> createSingleton(int iElem) {
 		ArrayList<Integer> newSet = new ArrayList<Integer>();		
 		newSet.add(iElem);	
 		return newSet;
 	}
 	
-	static void addElem(int iElem, ArrayList<Integer> ioSet)
-	{
-		if(!ioSet.contains(iElem)) // on s assure que chaque element est present quune seule fois
+	static void addElem(int iElem, ArrayList<Integer> ioSet) {
+		if(!ioSet.contains(iElem)) { // on s assure que chaque element est present quune seule fois
 			ioSet.add(iElem);
+		}
 	}
 	
-	static void displaySet(ArrayList<Integer> iSet)
-	{
+	static void displaySet(ArrayList<Integer> iSet) {
 		int sizeSet = iSet.size(), i=0;
-		for(i=0;i<sizeSet;i++) 
+		for(i=0;i<sizeSet;i++) {
 			System.out.print(iSet.get(i)+" | ");
+		}
 		System.out.println();
 	}
 	
-	static ArrayList<Integer> unionSet(ArrayList<Integer> iSet1,ArrayList<Integer> iSet2)
-	{
+	static ArrayList<Integer> unionSet(ArrayList<Integer> iSet1,ArrayList<Integer> iSet2) {
 		ArrayList<Integer> unionSet = new ArrayList<Integer>();
 		int sizeSet1 = iSet1.size(), sizeSet2 = iSet2.size(), i=0;
-		for(i=0;i<sizeSet1;i++)
-		{
+		for(i=0;i<sizeSet1;i++) {
 			addElem(iSet1.get(i),unionSet);
 		}
-		for(i=0;i<sizeSet2;i++)
-		{
+		for(i=0;i<sizeSet2;i++) {
 			addElem(iSet2.get(i),unionSet);
 		}
 		return unionSet;
 	}
 	
-	static ArrayList<Integer> intersectionSet(ArrayList<Integer> iSet1,ArrayList<Integer> iSet2)
-	{
+	static ArrayList<Integer> intersectionSet(ArrayList<Integer> iSet1,ArrayList<Integer> iSet2) {
 		ArrayList<Integer> intersectionSet = new ArrayList<Integer>();
 		int sizeSet1 = iSet1.size(), i=0;
-		for(i=0;i<sizeSet1;i++)
-		{
-			if(iSet2.contains(iSet1.get(i))) // on ajoute que sil est present dans les deux
+		for(i=0;i<sizeSet1;i++) {
+			if(iSet2.contains(iSet1.get(i))) { // on ajoute que sil est present dans les deux
 				intersectionSet.add(iSet1.get(i));
+			}
 		}
 		return intersectionSet;
 	}
 	
-	static boolean isInSet(int iElem, ArrayList<Integer> iSet)
-	{
+	static boolean isInSet(int iElem, ArrayList<Integer> iSet) {
 		return iSet.contains(iElem);
 	}
 	
-	static int nbSetElems(ArrayList<Integer> iSet)
-	{
+	static int nbSetElems(ArrayList<Integer> iSet) {
 		return iSet.size();
 	}
 }

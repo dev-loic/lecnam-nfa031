@@ -23,15 +23,13 @@ public class Notes_Q3 {
 			System.out.print("Saisissez votre choix : ");
 			userChoice=sc.nextInt();			
 			
-			switch (userChoice)
-			{
+			switch (userChoice) {
 			case 1:	
 				System.out.print("Saisissez la note à ajouter : ");
 				newNote=sc.nextInt();
 				sc.nextLine();
 				addNewNote(newNote,tabNotes);
 				break;
-				
 			case 2:
 				System.out.print("Saisissez la note à modifier : ");
 				noteToModify=sc.nextInt();
@@ -40,15 +38,12 @@ public class Notes_Q3 {
 				sc.nextLine();
 				modifyNote(noteToModify,newNote,tabNotes);
 				break;
-				
 			case 3:
 				displayNotes(tabNotes);
 				break;
-				
 			case 4:
 				System.out.println("Moyenne : "+notesAverage(tabNotes));
 				break;
-				
 			case 9:
 				System.out.println("On quitte le programme, byebye !");
 			}
@@ -58,49 +53,44 @@ public class Notes_Q3 {
 
 	// QUESTION 1 
 	// Ajouter une nouvelle note
-	static void addNewNote (int iNewNote, ArrayList<Integer> ioTabNotes)
-	{
-		if (iNewNote<0) System.out.println("Note négative -> Non ajoutée");
-		else
+	static void addNewNote (int iNewNote, ArrayList<Integer> ioTabNotes) {
+		if (iNewNote<0) {
+			System.out.println("Note négative -> Non ajoutée");
+		} else {
 			ioTabNotes.add(iNewNote);
+		}
 	}
 
 	// Afficher toutes les notes
-	static void displayNotes(ArrayList<Integer> iTabNotes)
-	{
+	static void displayNotes(ArrayList<Integer> iTabNotes) {
 		int i=0, sizeNotes=iTabNotes.size();
-
 		System.out.println("Voici les notes de ce brave élève : ");
-		for(i=0;i<sizeNotes;i++)
+		for(i=0;i<sizeNotes;i++) {
 			System.out.print(iTabNotes.get(i)+" | ");
+		}
 		System.out.println();
 	}
 
 	// Calculer la moyenne des notes 
-	static double notesAverage(ArrayList<Integer> iTabNotes)
-	{
+	static double notesAverage(ArrayList<Integer> iTabNotes) {
 		double moyenne=0.0, somme=0.0;
 		int i=0, sizeNotes=iTabNotes.size();
-
-		for(i=0;i<sizeNotes;i++)
+		for(i=0;i<sizeNotes;i++) {
 			somme+=iTabNotes.get(i);
-
+		}
 		moyenne = ((int)((somme/sizeNotes)*100))/100.;
 		return moyenne;
 	}
 
 	// QUESTION 2
 	// Modifier une note existante
-	static void modifyNote (int iNoteToModify, int iNewNote, ArrayList<Integer> ioTabNotes)
-	{
+	static void modifyNote (int iNoteToModify, int iNewNote, ArrayList<Integer> ioTabNotes) {
 		int indexOfNoteToModify=-1;
-		if(!ioTabNotes.contains(iNoteToModify)) 
+		if(!ioTabNotes.contains(iNoteToModify)) {
 			System.out.println("Note non présente dans le tableau.");
-		else
-		{
+		} else {
 			indexOfNoteToModify=ioTabNotes.indexOf(iNoteToModify);
 			ioTabNotes.set(indexOfNoteToModify,iNewNote);
 		}
 	}
-
 }

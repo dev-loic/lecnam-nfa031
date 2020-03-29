@@ -27,8 +27,7 @@ public class Notes_tabStatic {
 			System.out.print("Saisissez votre choix : ");
 			userChoice=sc.nextInt();			
 
-			switch (userChoice)
-			{
+			switch (userChoice) {
 			case 1:	
 				System.out.print("Saisissez la note à ajouter : ");
 				newNote=sc.nextInt();
@@ -37,7 +36,6 @@ public class Notes_tabStatic {
 				sc.nextLine();
 				addNewNote(newNote,newCoef);
 				break;
-
 			case 2:
 				System.out.print("Saisissez la note à modifier : ");
 				noteToModify=sc.nextInt();
@@ -48,15 +46,12 @@ public class Notes_tabStatic {
 				sc.nextLine();
 				modifyNote(noteToModify,newNote,newCoef);
 				break;
-
 			case 3:
 				displayNotes();
 				break;
-
 			case 4:
 				System.out.println("Moyenne : "+notesAverage());
 				break;
-
 			case 9:
 				System.out.println("On quitte le programme, byebye !");
 			}
@@ -67,20 +62,19 @@ public class Notes_tabStatic {
 	// ajouter une nouvelle note
 	static void addNewNote (int iNewNote, int iCoef)
 	{
-		if (iNewNote<0) System.out.println("Note négative -> Non ajoutée");
-		else if (iCoef<=0) System.out.println("Coef négatif -> Non ajoutée");
-		else
-		{
+		if (iNewNote<0) {
+			System.out.println("Note négative -> Non ajoutée");
+		} else if (iCoef<=0) {
+			System.out.println("Coef négatif -> Non ajoutée");
+		} else {
 			TAB_NOTES.add(iNewNote);
 			TAB_COEFS.add(iCoef);
 		}
 	}
 
 	// afficher toutes les notes
-	static void displayNotes()
-	{
+	static void displayNotes() {
 		int i=0, sizeNotes=TAB_NOTES.size();
-
 		System.out.println("Voici les notes de ce brave élève et les coefs correspondant : ");
 		for(i=0;i<sizeNotes;i++)
 			System.out.print(TAB_NOTES.get(i)+" | ");

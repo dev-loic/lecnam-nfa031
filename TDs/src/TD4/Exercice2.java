@@ -5,15 +5,14 @@ import java.util.Scanner;
 public class Exercice2 {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
 		int puis=1;
 		int x,res;
-		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Saisissez un entier svp : ");
 		x = sc.nextInt();
 		res=x;
-		while (res<1000)
-		{
+		while (res<1000) {
 			res=res*x;
 			puis=puis+1;
 		}

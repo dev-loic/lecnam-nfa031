@@ -12,17 +12,14 @@ public class Ex4_Q2 {
 		
 	}
 	
-	static int nbOccurences (char iChar, char [] tabChar)
-	{
+	static int nbOccurences (char iChar, char [] tabChar) {
 		int sizeTab = tabChar.length, i=0, count=0;
 		
 		// On parcourt le tableau en entier
 		// A chaque fois qu'on trouve iChar, on augmente le compteur count
-		for (i=0;i<sizeTab;i++)
-		{
+		for (i=0;i<sizeTab;i++) {
 			if (tabChar[i]==iChar) count++;
 		}
-		
 		return count;
 	}
 	

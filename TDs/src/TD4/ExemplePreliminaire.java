@@ -5,15 +5,14 @@ import java.util.Scanner;
 public class ExemplePreliminaire {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
 		int total = 0 ; 
-		int x;
-		Scanner sc = new Scanner(System.in);		
+		int x;	
 		
 		System.out.print("Entrez le multiplicateur : ");
 		x = sc.nextInt();
 		
-		for (int i=1;i<=4;i++)
-		{
+		for (int i=1;i<=4;i++) {
 			total += (i*x);
 			// equivalent à total=total+(i*x)
 		}

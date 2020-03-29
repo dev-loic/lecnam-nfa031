@@ -8,12 +8,10 @@ public class Exercice4_1 {
 		Scanner sc = new Scanner(System.in);
 		char [] tabInitial = {'x','r','l','b'}, tabModified;
 		int i = 0, nbToAdd = 0, indexToAdd = 0, initialSize = tabInitial.length, newSize = 0;
-		
 	
 		// Affichage du tableau initial
 		System.out.println("Voici le tableau initial : ");
-		for (i=0;i<4;i++)
-		{
+		for (i=0;i<4;i++) {
 			System.out.print(tabInitial[i] + " | ");
 		}
 		
@@ -27,30 +25,25 @@ public class Exercice4_1 {
 		newSize = initialSize+nbToAdd;
 		tabModified = new char [newSize];
 		// Premiere boucle jusqu'à indexToAdd
-		for (i=0;i<indexToAdd;i++)
-		{
+		for (i=0;i<indexToAdd;i++) {
 			tabModified[i]=tabInitial[i];
 		}
 		// Ajout du tableau user
 		// Rque : i n'est pas reinitialisé, il vaut à ce moment là indexToAdd
-		for(;i<indexToAdd+nbToAdd;i++)
-		{
+		for(;i<indexToAdd+nbToAdd;i++) {
 			System.out.print("Saisissez un caractère à ajouter : " );
 			tabModified[i]=sc.nextLine().charAt(0);
 		}
 		// Puis on finit le tableau
-		for(;i<newSize;i++)
-		{
+		for(;i<newSize;i++) {
 			tabModified[i]=tabInitial[i-nbToAdd];
 		}
 		
 		// Affichage du tableau
 		System.out.println("Voici le tableau modifié : ");
-		for (i=0;i<newSize;i++)
-		{
+		for (i=0;i<newSize;i++) {
 			System.out.print(tabModified[i]+" | ");
 		}
-		// Pour clore le Scanner
 		sc.close();
 	}
 

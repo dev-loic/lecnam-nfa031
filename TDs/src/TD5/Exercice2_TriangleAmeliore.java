@@ -7,26 +7,26 @@ import java.util.Scanner;
 public class Exercice2_TriangleAmeliore {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		int N = 0, iEspaces = 0, ligne = 1;
-		String patternEspaces="";
-		String patternEtoiles="";
-		Scanner sc = new Scanner (System.in);
+		String patternEspaces = "";
+		String patternEtoiles = "";
 
 		System.out.print("Saisissez la dimension souhaitée : ");
 		N = sc.nextInt();
-		if (N<=0) System.out.println("Le nombre de ligne n'est pas correct !");
+		if (N<=0) {
+			System.out.println("Le nombre de ligne n'est pas correct !");
+		}
 
 		long debut = System.currentTimeMillis();
 		 
 		// On construit les éléments de la première ligne 
-		for (iEspaces=1;iEspaces<=N-1;iEspaces++)
-		{
+		for (iEspaces=1;iEspaces<=N-1;iEspaces++) {
 			patternEspaces+=" ";
 		}
 		patternEtoiles="*";
 		
-		while (ligne<=N)
-		{
+		while (ligne<=N) {
 			System.out.println(patternEspaces+patternEtoiles);
 			
 			// on met à jour les pattern

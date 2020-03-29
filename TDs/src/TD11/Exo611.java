@@ -10,8 +10,7 @@ public class Exo611 {
 		int i=0, sizeArgs=args.length, somme=0;
 		double moyenne=0.0;
 		
-		for (i=0;i<sizeArgs;i++)
-		{
+		for (i=0;i<sizeArgs;i++) {
 			somme+=Integer.parseInt(args[i]);
 		}
 		moyenne = ((double)somme)/sizeArgs;

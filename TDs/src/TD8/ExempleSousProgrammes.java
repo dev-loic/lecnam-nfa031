@@ -7,14 +7,12 @@ public class ExempleSousProgrammes {
 		int size = tab.length, i=0, j=size-1, temp=0;
 		
 		// Premier affichage du tableau
-		for (i=0;i<size;i++)
-		{
+		for (i=0;i<size;i++) {
 			System.out.print(tab[i]+" | ");
 		}
 		
 		// Inversion du tableau
-		for (i=0;i<size/2;i++)
-		{
+		for (i=0;i<size/2;i++) {
 			temp=tab[i];
 			tab[i]=tab[j];
 			tab[j]=temp;
@@ -23,12 +21,9 @@ public class ExempleSousProgrammes {
 		
 		System.out.println();
 		// Deuxième affichage du tableau
-		for (i=0;i<size;i++)
-		{
+		for (i=0;i<size;i++) {
 			System.out.print(tab[i]+" | ");
 		}
-
 	}
-
 }
 

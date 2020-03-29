@@ -7,18 +7,14 @@ public class TriBulle {
 		int sizeTab = tabInt.length;
 		
 		// Afficher le tableau
-		for (int i=0;i<sizeTab;i++)
-		{
+		for (int i=0;i<sizeTab;i++) {
 			System.out.print(tabInt[i] + " | ");
 		}
 		System.out.println();
 		
-		for(int i=sizeTab-1;i>1;i--)
-		{
-			for(int j=0;j<i;j++)
-			{
-				if(tabInt[j]>tabInt[j+1])
-				{
+		for(int i=sizeTab-1;i>1;i--) {
+			for(int j=0;j<i;j++) {
+				if(tabInt[j]>tabInt[j+1]) {
 					int temp = tabInt[j];
 					tabInt[j] = tabInt[j+1];
 					tabInt[j+1] = temp;
@@ -27,12 +23,9 @@ public class TriBulle {
 		}
 		
 		// Afficher le tableau
-		for (int i=0;i<sizeTab;i++)
-		{
+		for (int i=0;i<sizeTab;i++) {
 			System.out.print(tabInt[i] + " | ");
 		}
 		System.out.println();
-
 	}
-
 }

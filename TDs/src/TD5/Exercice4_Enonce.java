@@ -4,25 +4,20 @@ import java.util.Scanner;
 
 public class Exercice4_Enonce {
 
-	public static void main(String args[]) 
-	{
-		int a=0, b=0, r=1; 
+	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
+		int a=0, b=0, r=1; 
 
 		System.out.print("Entrez a : "); 
 		a = sc.nextInt(); 
 		System.out.print("Entrez b : "); 
 		b = sc.nextInt(); 
 
-		while (b != 0) 
-		{
-			if (b % 2 == 0) 
-			{ 
+		while (b != 0) {
+			if (b % 2 == 0) { 
 				a = a*a;
 				b = b/2;
-			} 
-			else 
-			{
+			} else {
 				r = r*a;
 				b = b-1; 
 			}

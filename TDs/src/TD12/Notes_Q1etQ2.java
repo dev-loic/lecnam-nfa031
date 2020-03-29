@@ -27,45 +27,41 @@ public class Notes_Q1etQ2 {
 	
 	// QUESTION 1
 	// Ajouter une nouvelle note
-	static void addNewNote (int iNewNote, ArrayList<Integer> ioTabNotes)
-	{
-		if (iNewNote<0 || iNewNote>20) System.out.println("Note non conforme -> Non ajoutée");
-		else
+	static void addNewNote (int iNewNote, ArrayList<Integer> ioTabNotes) {
+		if (iNewNote<0 || iNewNote>20) {
+			System.out.println("Note non conforme -> Non ajoutée");
+		} else {
 			ioTabNotes.add(iNewNote);
+		}
 	}
 	
 	// Afficher toutes les notes
-	static void displayNotes(ArrayList<Integer> iTabNotes)
-	{
+	static void displayNotes(ArrayList<Integer> iTabNotes) {
 		int i=0, sizeNotes=iTabNotes.size();
-		
 		System.out.println("Voici les notes de ce brave élève : ");
-		for(i=0;i<sizeNotes;i++)
+		for(i=0;i<sizeNotes;i++) {
 			System.out.print(iTabNotes.get(i)+" | ");
+		}
 	}
 
 	// Calculer la moyenne des notes 
-	static double notesAverage(ArrayList<Integer> iTabNotes)
-	{
+	static double notesAverage(ArrayList<Integer> iTabNotes) {
 		double moyenne=0.0, somme=0.0;
 		int i=0, sizeNotes=iTabNotes.size();
-		
-		for(i=0;i<sizeNotes;i++)
+		for(i=0;i<sizeNotes;i++) {
 			somme+=iTabNotes.get(i);
-		
+		}
 		moyenne = ((int)((somme/sizeNotes)*100))/100.;
 		return moyenne;
 	}
 	
 	// QUESTION 2
 	// Modifier une note existante
-	void modifyNote (int iNoteToModify, int iNewNote, ArrayList<Integer> ioTabNotes)
-	{
+	void modifyNote (int iNoteToModify, int iNewNote, ArrayList<Integer> ioTabNotes) {
 		int indexOfNoteToModify=-1;
-		if(!ioTabNotes.contains(iNoteToModify)) 
+		if(!ioTabNotes.contains(iNoteToModify)) {
 			System.out.println("Note non présente dans le tableau.");
-		else
-		{
+		} else {
 			indexOfNoteToModify=ioTabNotes.indexOf(iNoteToModify);
 			ioTabNotes.set(indexOfNoteToModify,iNewNote);
 		}

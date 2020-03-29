@@ -11,28 +11,24 @@ public class TestRedemanderChoixUser {
 	 * L'exemple n'est pas très intelligent mais permet de voir comme gérer ces élements.
 	 */
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		int choixInt = 0;
 		boolean correctIntValue = false;
 		boolean onceMore = true;
 		char userChoice = 'o';
-		Scanner sc = new Scanner(System.in);
-		
-		
+				
 		System.out.println("**Bienvenue dans le programme**");
 		
 		// Boucle do-while qui gère la ressaisie utilisateur si nécessaire
-		do
-		{
+		do {
 			// obligatoire si l'utilisateur redemande une saisie
 			correctIntValue=false;
-			do
-			{
+			do {
 				System.out.println("Veuillez saisir un entier compris entre 1 et 5 (inclus) : ");
 				choixInt = Integer.parseInt(sc.nextLine());
 
 				// Test d'erreur
-				if(choixInt<1 || choixInt>5)
-				{
+				if(choixInt<1 || choixInt>5) {
 					System.out.println("[ERREUR] : l'entier saisi est inférieur à 1 ou supérieur à 5. Veuillez renouveller la saisie.");
 					continue; // Le continue nous fait repartir au début de la boucle do-while qui gère l'erreur
 				}
@@ -46,7 +42,9 @@ public class TestRedemanderChoixUser {
 			System.out.println("Souhaitez-vous saisir une nouvelle valeur entière ? (o/n)");
 			userChoice = sc.nextLine().charAt(0);
 			
-			if(userChoice=='n') onceMore=false;
+			if(userChoice=='n') {
+				onceMore=false;
+			}
 			
 		} while(onceMore);
 		

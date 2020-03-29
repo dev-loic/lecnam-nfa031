@@ -7,27 +7,26 @@ import java.util.Scanner;
 public class Exercice2_Triangle {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		int N = 0, iEspaces = 0, iEtoiles = 0, ligne = 1;
 		String patternEspaces="";
 		String patternEtoiles="";
-		Scanner sc = new Scanner (System.in);
 	
 		System.out.print("Saisissez la dimension souhaitée : ");
 		N = sc.nextInt();
 		
-		if (N<=0) System.out.println("[ERREUR] : dimension nulle ou négative");
+		if (N<=0) {
+			System.out.println("[ERREUR] : dimension nulle ou négative");
+		}
 		
 		// Pour afficher le tps d'execution, on prend un point de départ
 		long debut = System.currentTimeMillis();
 		
-		while (ligne<=N)
-		{
-			for (iEspaces=1;iEspaces<=N-ligne;iEspaces++)
-			{
+		while (ligne<=N) {
+			for (iEspaces=1;iEspaces<=N-ligne;iEspaces++) {
 				patternEspaces+=" ";
 			}
-			for (iEtoiles=1;iEtoiles<=2*ligne-1;iEtoiles++)
-			{
+			for (iEtoiles=1;iEtoiles<=2*ligne-1;iEtoiles++) {
 				patternEtoiles+="*";
 			}
 			System.out.println(patternEspaces+patternEtoiles);

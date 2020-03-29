@@ -4,12 +4,9 @@ import java.util.Scanner;
 
 public class Ex1_Q4 {
 	
-	static int divisionEntiere(int x,int y)
-	{
+	static int divisionEntiere(int x,int y) {
 		int result=0, current=Math.abs(x), signe=1;
-		
-		if (y==0)
-		{
+		if (y==0) {
 			System.out.println("La division par 0 est impossible !!! ");
 			// le choix de Integer.MIN_VALUE est arbitraire
 			return Integer.MIN_VALUE;
@@ -18,8 +15,11 @@ public class Ex1_Q4 {
 		// On gère le signe du résultat
 		// Si x et y sont tous les 2 négatifs ou tous les 2 positifs => signe positif
 		// sinon signe négatif
-		if ((x<0 && y<0) || (x>0 && y>0)) signe=1;
-		else signe=-1;
+		if ((x<0 && y<0) || (x>0 && y>0)) {
+			signe=1;
+		} else {
+			signe=-1;
+		}
 		
 		// On utilise la fonction valeur absolue (Math.abs)
 		// Cette fonctionne permet de s'assurer que la valeur qu'on utilise est positive
@@ -27,8 +27,7 @@ public class Ex1_Q4 {
 		// Ex2 : Math.abs(5) = 5
 		// Ainsi en s'assurant de travailler avec des valeurs positives, on peut utiliser le même algo
 		// Le signe étant déjà sauvegardé dans la variable "signe"
-		while(current>=Math.abs(y))
-		{
+		while(current>=Math.abs(y)) {
 			current-=Math.abs(y); // current = current-y
 			result+=1; // result = result+1
 		}
@@ -48,11 +47,12 @@ public class Ex1_Q4 {
 
 		result = divisionEntiere(x,y);
 
-		if (result==Integer.MIN_VALUE) System.out.println("Le programme a rencontré une erreur.");
-		else System.out.println(x+"/"+y+" = "+result);
+		if (result==Integer.MIN_VALUE) {
+			System.out.println("Le programme a rencontré une erreur.");
+		} else {
+			System.out.println(x+"/"+y+" = "+result);
+		}
 
-		// Clôture du Scanner
 		sc.close();
 	}
-
 }

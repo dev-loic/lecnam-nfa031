@@ -20,13 +20,11 @@ public class Ex2 {
 
 	}
 
-	static double carre(double a)
-	{
+	static double carre(double a) {
 		return a*a;
 	}
 	
-	static double cube(double a)
-	{
+	static double cube(double a) {
 		return carre(a)*a;
 	}
 }

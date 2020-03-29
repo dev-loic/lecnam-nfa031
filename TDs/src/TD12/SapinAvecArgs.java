@@ -8,25 +8,20 @@ public class SapinAvecArgs {
 		String patternEtoiles="";
 
 		// le try est nécessaire pour gérer les erreurs éventuelles du parseInt
-		
 		try {
-			if (args.length!=1) System.out.println("Vous devez donner la taille du sapin en argument");
-			else
-			{
+			if (args.length!=1) {
+				System.out.println("Vous devez donner la taille du sapin en argument");
+			} else {
 				System.out.println("Vous avez demandé un sapin de "+args[0]+" lignes de haut!");
-
-
 				N = Integer.parseInt(args[0]);
-
+				
 				// On construit les éléments de la première ligne 
-				for (iEspaces=1;iEspaces<=N-1;iEspaces++)
-				{
+				for (iEspaces=1;iEspaces<=N-1;iEspaces++) {
 					patternEspaces+=" ";
 				}
 				patternEtoiles="*";
 
-				while (ligne<=N)
-				{
+				while (ligne<=N) {
 					System.out.println(patternEspaces+patternEtoiles);
 
 					// on met à jour les pattern
@@ -40,11 +35,8 @@ public class SapinAvecArgs {
 					ligne++;
 				}		
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			System.out.print(e);
 		}
 	}
-
 }

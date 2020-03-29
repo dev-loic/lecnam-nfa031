@@ -15,14 +15,12 @@ public class Exercice4_2 {
 		
 		// Affichage du tableau initial
 		System.out.println("Voici le tableau initial : ");
-		for (i=0;i<4;i++)
-		{
+		for (i=0;i<4;i++) {
 			System.out.print(tabInitial[i] + " | ");
 		}
 
 		// On ajoute la possibilité de modifier plusieurs fois le tableau
-		do
-		{
+		do {
 			// Nb de caractères à ajouter + Indice où il souhaite ajouter ces valeurs
 			System.out.print("\nCombien de caractères souhaitez-vous ajouter ? ");
 			nbToAdd = sc.nextInt();
@@ -34,44 +32,37 @@ public class Exercice4_2 {
 			newSize = initialSize+nbToAdd;
 			tabModified = new char [newSize];
 			// Premiere boucle jusqu'à indexToAdd
-			for (i=0;i<indexToAdd;i++)
-			{
+			for (i=0;i<indexToAdd;i++) {
 				tabModified[i]=tabInitial[i];
 			}
 			// Ajout du tableau user
 			// Rque : i n'est pas reinitialisé, il vaut à ce moment là indexToAdd
-			for(;i<indexToAdd+nbToAdd;i++)
-			{
+			for(;i<indexToAdd+nbToAdd;i++) {
 				System.out.print("Saisissez un caractère à ajouter : " );
 				tabModified[i]=sc.nextLine().charAt(0);
 			}
 			// Puis on finit le tableau
-			for(;i<newSize;i++)
-			{
+			for(;i<newSize;i++) {
 				tabModified[i]=tabInitial[i-nbToAdd];
 			}
 
 			// Affichage du tableau
 			System.out.println("Voici le tableau modifié : ");
-			for (i=0;i<newSize;i++)
-			{
+			for (i=0;i<newSize;i++) {
 				System.out.print(tabModified[i]+" | ");
 			}
 			
 			// On demande au user s'il veut continuer 
 			System.out.println("\nSouhaitez-vous continuer ? (O ou N) ");
 			answer = sc.nextLine().charAt(0);
-			if (answer=='N') out=true;
-			else
-			{			
+			if (answer=='N') {
+				out=true;
+			} else {			
 				tabInitial = tabModified;
 				initialSize = tabInitial.length;		
 			}
 		} while (!out);
-		
 		System.out.println("*** FIN DU PROGRAMME ***");
-		
-		// Pour clore le Scanner
 		sc.close();
 	}
 }

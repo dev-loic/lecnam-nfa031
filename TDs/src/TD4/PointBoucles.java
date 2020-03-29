@@ -8,8 +8,7 @@ public class PointBoucles {
 		int i = 0 ; // compteur de la boucle
 		int n = 10; // fin de la boucle
 		
-		for ( i = 1 ; i <= n ; i=i+1 )
-		{
+		for (i=1 ; i<=n ; i=i+1) {
 			// on fait des choses
 		}
 		
@@ -17,8 +16,7 @@ public class PointBoucles {
 		int j = 0 ; // compteur de la boucle
 		int start = 10; // début de la boucle
 
-		for ( j = start ; j >= 1 ; i=i-1 )
-		{
+		for (j=start ; j>=1 ; i=i-1) {
 			// on fait des choses
 		}
 		
@@ -26,8 +24,7 @@ public class PointBoucles {
 		int resultat = 0;
 		int condition = 10;
 		
-		while (resultat < condition)
-		{
+		while (resultat < condition) {
 			// on fait des choses
 			// notamment faire evoluer resultat
 		}
@@ -36,15 +33,11 @@ public class PointBoucles {
 		int resultat2 = 0;
 		int condition2 = 10;
 
-		do
-		{
+		do {
 			// on fait des choses
 			// notamment faire evoluer resultat2
 		}
 		while (resultat2 < condition2);
-		
-		
-
 	}
 
 }

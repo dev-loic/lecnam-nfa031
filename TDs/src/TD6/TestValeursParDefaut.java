@@ -8,8 +8,7 @@ public class TestValeursParDefaut {
 		// Tableau d'entiers
 		int [] tabInt = new int[10];
 		int sizeTab = tabInt.length;
-		for (int i=0;i<sizeTab;i++)
-		{
+		for (int i=0;i<sizeTab;i++) {
 			System.out.print(tabInt[i]+" | ");
 		}
 		
@@ -18,8 +17,7 @@ public class TestValeursParDefaut {
 		
 		// Tableau de caractèresc
 		char [] tabChar = new char[10];
-		for (int i=0;i<tabChar.length;i++)
-		{
+		for (int i=0;i<tabChar.length;i++) {
 			System.out.print(tabChar[i]+" | ");
 		}
 		
@@ -27,11 +25,8 @@ public class TestValeursParDefaut {
 		
 		// Tableau de caractères
 		boolean [] tabBoolean = new boolean[10];
-		for (int i=0;i<tabBoolean.length;i++)
-		{
+		for (int i=0;i<tabBoolean.length;i++) {
 			System.out.print(tabBoolean[i]+" | ");
 		}
-
 	}
-
 }

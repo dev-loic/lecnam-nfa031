@@ -13,21 +13,20 @@ public class Ex6_Q2 {
 
 	// factoriser trait bas trait haut
 	
-	static void afficheTable(int[] iTab)
-	{
+	static void afficheTable(int[] iTab) {
 		int size = iTab.length, i=0;
 		System.out.print('+');
-		for (i=0; i<size; i++){
+		for (i=0; i<size; i++) {
 			System.out.print("-"+adaptiveDash(iTab[i])+"-+");
 		}
 		System.out.println();
 		System.out.print('|');
-		for (i=0; i<size; i++){
+		for (i=0; i<size; i++) {
 			System.out.print(" " + iTab[i] + " |");
 		}
 		System.out.println();
 		System.out.print('+');
-		for (i=0; i<size; i++){
+		for (i=0; i<size; i++) {
 			System.out.print("-"+adaptiveDash(iTab[i])+"-+");
 		}
 		System.out.println();
@@ -35,16 +34,13 @@ public class Ex6_Q2 {
 	
 	//méthode qui donne le meme nombre de tiret que le nb de chiffres de iNum
 	// Vu quon transforme iNum en string, le - est aussi pris en compte ;)
-	static String adaptiveDash(int iNum)
-	{
+	static String adaptiveDash(int iNum) {
 		int iDash = 0;
 		String adaptiveDash = "";
-		
 		String num = Integer.toString(iNum);
-		for (iDash=0;iDash<num.length();iDash++)
+		for (iDash=0;iDash<num.length();iDash++) {
 			adaptiveDash+="-";
-		
+		}
 		return adaptiveDash;
 	}
-
 }

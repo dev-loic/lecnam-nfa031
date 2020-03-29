@@ -15,10 +15,8 @@ public class Exercice1_Q3 {
 		// Le tout est d'être cohérent		
 		
 		// On rentre les données 
-		for (j=0;j<sizeLignes;j++)
-		{
-			for (i=0;i<sizeColonnes;i++)
-			{
+		for (j=0;j<sizeLignes;j++) {
+			for (i=0;i<sizeColonnes;i++) {
 				System.out.print("Combien de "+labelsColonnes[i]+" a vendu "+labelsLignes[j]+" ? ");
 				tabVentes[i][j]=sc.nextInt();
 			}
@@ -27,11 +25,9 @@ public class Exercice1_Q3 {
 		
 		// On affiche le tableau des ventes
 		System.out.println("**** TABLEAU DES VENTES ****");	
-		for (j=0;j<sizeLignes;j++)
-		{
+		for (j=0;j<sizeLignes;j++) {
 			System.out.print(labelsLignes[j]+ " --> ");
-			for (i=0;i<sizeColonnes;i++)
-			{
+			for (i=0;i<sizeColonnes;i++) {
 				System.out.print(tabVentes[i][j]+" "+labelsColonnes[i]+" | ");
 			}
 			System.out.println();
@@ -41,18 +37,14 @@ public class Exercice1_Q3 {
 		// On affiche le chiffre d'affaire par vendeur
 		System.out.println("**** CA par vendeur ****");	
 		
-		for(j=0;j<sizeLignes;j++)
-		{
-			for (i=0;i<sizeColonnes;i++)
-			{
+		for(j=0;j<sizeLignes;j++) {
+			for (i=0;i<sizeColonnes;i++) {
 				CA+=tabVentes[i][j]*tabTarifs[i];
 			}
 			System.out.println(labelsLignes[j]+" a réalisé "+CA+" € de chiffre d'affaire!");
 			// On oublie pas de remettre la variable à 0 pour relancer le calcul pour le vendeur suivant
 			CA=0;
 		}
-		// Pour clore le Scanner
 		sc.close();
 	}
-	
 }
