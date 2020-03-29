@@ -23,99 +23,70 @@ public class Exo714_CodeCesar {
 	}
 	
 	// Methode qui encode une chaine de caractere a laide du code cesar
-	static String encodageCesar (String iChaineToCode)
-	{
+	static String encodageCesar (String iChaineToCode) {
 		int sizeChaineToCode = iChaineToCode.length(), i=0;
 		char [] iTabCharCoded = new char[sizeChaineToCode];
 		
-		for (i=0;i<sizeChaineToCode;i++)
-		{
-			if (!Character.isLetter(iChaineToCode.charAt(i)))
-			{
+		for (i=0;i<sizeChaineToCode;i++) {
+			if (!Character.isLetter(iChaineToCode.charAt(i))) {
 				// si pas une lettre, on ne touche à rien
 				iTabCharCoded[i]=iChaineToCode.charAt(i);
-			}
-			else 
-			{
+			} else {
 				iTabCharCoded[i]=encodeCesar(iChaineToCode.charAt(i));
 			}
-
 		}
-		
 		return new String(iTabCharCoded);
 	}
 	
 	// methode qui encode un caractere a l aide du code cesar
-	static char encodeCesar (char iCharacter)
-	{
+	static char encodeCesar (char iCharacter) {
 		// Minuscule, on prend en ref 'a'
 		int beginCharCode = 0, curCharCode = 0, charCodedCode = 0;
-		
-		if (Character.isLowerCase(iCharacter))
-		{
+		if (Character.isLowerCase(iCharacter)) {
 			// Minuscule, on prend en ref 'a'
 			beginCharCode = 'a';
-		}
-		else if (Character.isUpperCase(iCharacter))
-		{
+		} else if (Character.isUpperCase(iCharacter)) {
 			// Minuscule, on prend en ref 'A'
 			beginCharCode = 'A';
 		}
-		
 		curCharCode = iCharacter-beginCharCode;// on ramène le code entre 0 et 25
 		// on ajoute les 3 qu'on module 26 afin de recupérer le reste de la division entiere
 		// Exemples : 
 		// ('a'-'a'+3)%26 = (0 + 3)%26 = 'd'
 		// ('y'-'a'+3)%26 = (24+3)%26 = 27%26 = 1 => 'b'
 		charCodedCode=(curCharCode+3)%26+beginCharCode; 
-		
 		return (char)charCodedCode;
 	}
 	
 	// Decodage Cesar d une chaine de caractere
-	static String decodageCesar (String iChaineToDecode)
-	{
+	static String decodageCesar (String iChaineToDecode) {
 		int sizeChaineToDecode = iChaineToDecode.length(), i=0;
 		char [] iTabCharDecoded = new char[sizeChaineToDecode];
 		
-		for (i=0;i<sizeChaineToDecode;i++)
-		{
-			if (!Character.isLetter(iChaineToDecode.charAt(i)))
-			{
+		for (i=0;i<sizeChaineToDecode;i++) {
+			if (!Character.isLetter(iChaineToDecode.charAt(i))) {
 				// si pas une lettre, on ne touche à rien
 				iTabCharDecoded[i]=iChaineToDecode.charAt(i);
-			}
-			else 
-			{
+			} else {
 				iTabCharDecoded[i]=decodeCesar(iChaineToDecode.charAt(i));
 			}
-
 		}
-		
 		return new String(iTabCharDecoded);
 	}
 	
 	// decodage cesar d un caractere
-	static char decodeCesar (char iCharacter)
-	{
+	static char decodeCesar (char iCharacter) {
 		int endCharCode = 0, curCharCode = 0, charCodedCode = 0;
-		
-		if (Character.isLowerCase(iCharacter))
-		{
+		if (Character.isLowerCase(iCharacter)) {
 			// Minuscule, on prend en ref 'z'
 			endCharCode = 'z';
-		}
-		else if (Character.isUpperCase(iCharacter))
-		{
+		} else if (Character.isUpperCase(iCharacter)) {
 			// Minuscule, on prend en ref 'Z'
 			endCharCode = 'Z';
 		}
-		
 		curCharCode = iCharacter-endCharCode;
 		// operation inverse du codage
 		charCodedCode=endCharCode+(curCharCode-3)%26; 
-		
 		return (char)charCodedCode;
 	}
-
 }
