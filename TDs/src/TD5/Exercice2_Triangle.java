@@ -7,40 +7,39 @@ import java.util.Scanner;
 public class Exercice2_Triangle {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int N = 0, iEspaces = 0, iEtoiles = 0, ligne = 1;
-		String patternEspaces="";
-		String patternEtoiles="";
-	
-		System.out.print("Saisissez la dimension souhaitée : ");
-		N = sc.nextInt();
-		
-		if (N<=0) {
-			System.out.println("[ERREUR] : dimension nulle ou négative");
+		Scanner sc = new Scanner (System.in);
+
+		// Recuperation du nb de lignes de mon triangle
+		int nbOfLines = 0;
+		boolean correct = false;
+		while(!correct) {
+			System.out.print("Saisissez un nombre de lignes : ");
+			nbOfLines = sc.nextInt();
+			if (nbOfLines > 0) {
+				correct = true;
+			} else {
+				System.out.println("ERREUR : nombre de lignes incorrect");
+			}
 		}
-		
-		// Pour afficher le tps d'execution, on prend un point de départ
+
 		long debut = System.currentTimeMillis();
 		
-		while (ligne<=N) {
-			for (iEspaces=1;iEspaces<=N-ligne;iEspaces++) {
-				patternEspaces+=" ";
+		for(int i=1; i<=nbOfLines; i++) {
+			String line = "";
+			for (int j=1; j<=nbOfLines-i; j++) {
+				line = line + " ";
 			}
-			for (iEtoiles=1;iEtoiles<=2*ligne-1;iEtoiles++) {
-				patternEtoiles+="*";
+			for (int j=1; j<=2*i-1; j++) {
+				line = line + "*";
 			}
-			System.out.println(patternEspaces+patternEtoiles);
-			
-			// on remet les pattern vides
-			patternEspaces="";
-			patternEtoiles="";
-			// on passe à la ligne suivante 
-			ligne++;
+			System.out.println(line);
 		}
+		
 		// Temps d'execution : on a fini, on peut prendre notre point d'arrivée
 		// Et afficher le résultat.
 		System.out.print("Temps d'execution : ");
 		System.out.println(System.currentTimeMillis()-debut);
+		
 		sc.close();
 	}
 

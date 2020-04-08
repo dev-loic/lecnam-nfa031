@@ -7,41 +7,40 @@ import java.util.Scanner;
 public class Exercice2_TriangleAmeliore {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int N = 0, iEspaces = 0, ligne = 1;
-		String patternEspaces = "";
-		String patternEtoiles = "";
+		Scanner sc = new Scanner (System.in);
 
-		System.out.print("Saisissez la dimension souhaitée : ");
-		N = sc.nextInt();
-		if (N<=0) {
-			System.out.println("Le nombre de ligne n'est pas correct !");
+		// Recuperation du nb de lignes de mon triangle
+		int nbOfLines = 0;
+		boolean correct = false;
+		while(!correct) {
+			System.out.print("Saisissez un nombre de lignes : ");
+			nbOfLines = sc.nextInt();
+			if (nbOfLines > 0) {
+				correct = true;
+			} else {
+				System.out.println("ERREUR : nombre de lignes incorrect");
+			}
 		}
 
 		long debut = System.currentTimeMillis();
-		 
-		// On construit les éléments de la première ligne 
-		for (iEspaces=1;iEspaces<=N-1;iEspaces++) {
-			patternEspaces+=" ";
+		
+		String spaces = "";
+		String stars = "*";
+		for(int i=1; i<=nbOfLines-1; i++) {
+			spaces = spaces + " ";
 		}
-		patternEtoiles="*";
-		
-		while (ligne<=N) {
-			System.out.println(patternEspaces+patternEtoiles);
-			
-			// on met à jour les pattern
-			// Attention pour la derniere ligne, le pattern d espaces est vide
-			// String test = "cnam";
-			// test.substring(1) => nam
-			if (ligne!=N) patternEspaces=patternEspaces.substring(1);
-			patternEtoiles+="**";	
-			
-			// on passe à la ligne suivante 
-			ligne++;
-		}		
-		
+		for (int i=1; i<=nbOfLines; i++) {
+			System.out.println(spaces+stars);
+			if(spaces.length()!=0) {
+				spaces = spaces.substring(1);
+			}
+			stars = stars + "**";
+		}
+		// Temps d'execution : on a fini, on peut prendre notre point d'arrivée
+		// Et afficher le résultat.
 		System.out.print("Temps d'execution : ");
 		System.out.println(System.currentTimeMillis()-debut);
+		
 		sc.close();
 	}
 
