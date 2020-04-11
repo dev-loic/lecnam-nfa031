@@ -6,12 +6,11 @@ public class Exercice2 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int i = 0;
 		boolean [] tab = new boolean[4];
 		boolean resultatET = false, resultatOU = false;
 		
 		// Saisie clavier
-		for (i=0;i<4;i++) {
+		for (int i=0;i<4;i++) {
 			System.out.print("Saisissez un booléen (true ou false) : ");
 			tab[i]=sc.nextBoolean();
 		}

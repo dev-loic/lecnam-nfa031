@@ -24,10 +24,10 @@ public class Exo714_CodeCesar {
 	
 	// Methode qui encode une chaine de caractere a laide du code cesar
 	static String encodageCesar (String iChaineToCode) {
-		int sizeChaineToCode = iChaineToCode.length(), i=0;
+		int sizeChaineToCode = iChaineToCode.length();
 		char [] iTabCharCoded = new char[sizeChaineToCode];
 		
-		for (i=0;i<sizeChaineToCode;i++) {
+		for (int i=0;i<sizeChaineToCode;i++) {
 			if (!Character.isLetter(iChaineToCode.charAt(i))) {
 				// si pas une lettre, on ne touche à rien
 				iTabCharCoded[i]=iChaineToCode.charAt(i);
@@ -60,10 +60,10 @@ public class Exo714_CodeCesar {
 	
 	// Decodage Cesar d une chaine de caractere
 	static String decodageCesar (String iChaineToDecode) {
-		int sizeChaineToDecode = iChaineToDecode.length(), i=0;
+		int sizeChaineToDecode = iChaineToDecode.length();
 		char [] iTabCharDecoded = new char[sizeChaineToDecode];
 		
-		for (i=0;i<sizeChaineToDecode;i++) {
+		for (int i=0;i<sizeChaineToDecode;i++) {
 			if (!Character.isLetter(iChaineToDecode.charAt(i))) {
 				// si pas une lettre, on ne touche à rien
 				iTabCharDecoded[i]=iChaineToDecode.charAt(i);

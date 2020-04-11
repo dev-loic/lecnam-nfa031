@@ -8,14 +8,14 @@ public class Exercice4_2 {
 		Scanner sc = new Scanner(System.in);
 		char [] tabInitial = {'x','r','l','b'}, tabModified;
 		char answer = 'N';
-		int i = 0, nbToAdd = 0, indexToAdd = 0, initialSize = tabInitial.length, newSize = 0;
+		int nbToAdd = 0, indexToAdd = 0, initialSize = tabInitial.length, newSize = 0;
 		boolean out = false;
 
 		System.out.println("*** DÉBUT DU PROGRAMME ***");
 		
 		// Affichage du tableau initial
 		System.out.println("Voici le tableau initial : ");
-		for (i=0;i<4;i++) {
+		for (int i=0;i<4;i++) {
 			System.out.print(tabInitial[i] + " | ");
 		}
 
@@ -32,7 +32,9 @@ public class Exercice4_2 {
 			newSize = initialSize+nbToAdd;
 			tabModified = new char [newSize];
 			// Premiere boucle jusqu'à indexToAdd
-			for (i=0;i<indexToAdd;i++) {
+			// idem que l'exercice précédent pour i
+			int i = 0;
+			for (;i<indexToAdd;i++) {
 				tabModified[i]=tabInitial[i];
 			}
 			// Ajout du tableau user
@@ -48,8 +50,8 @@ public class Exercice4_2 {
 
 			// Affichage du tableau
 			System.out.println("Voici le tableau modifié : ");
-			for (i=0;i<newSize;i++) {
-				System.out.print(tabModified[i]+" | ");
+			for (int j=0;j<newSize;j++) {
+				System.out.print(tabModified[j]+" | ");
 			}
 			
 			// On demande au user s'il veut continuer 

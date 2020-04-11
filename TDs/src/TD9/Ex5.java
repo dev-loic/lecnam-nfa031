@@ -20,12 +20,15 @@ public class Ex5 {
 	}
 	
 	static int [] concatenate(int [] iTab1, int [] iTab2) {
-		int sizeTab1 = iTab1.length, sizeTab2 = iTab2.length, i=0;
+		int sizeTab1 = iTab1.length, sizeTab2 = iTab2.length;
 		// on cree notre tableau resultat
 		int [] tabResult = new int[sizeTab1+sizeTab2]; 
 		
 		// On parcourt le premier tableau et on remplit tabResult avec les cases correspondantes
-		for (i=0;i<sizeTab1;i++) {
+		// Comme nous avons déjà vu, on initialise i à 0 à l'extérieur de la boucle, 
+		// afin de l'utiliser dans les 2 prochaines boucles
+		int i = 0;
+		for (;i<sizeTab1;i++) {
 			tabResult[i]=iTab1[i];
 		}
 		// arrive ici, i vaut sizeTab1, donc pas besoin de le réinitialiser

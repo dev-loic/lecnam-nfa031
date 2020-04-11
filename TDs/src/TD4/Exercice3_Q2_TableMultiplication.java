@@ -6,7 +6,7 @@ public class Exercice3_Q2_TableMultiplication {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner (System.in);
-		int nbUser = 0, result = 0, i = 0;
+		int nbUser = 0, result = 0;
 		boolean isCorrect = false;
 
 		do {
@@ -25,7 +25,7 @@ public class Exercice3_Q2_TableMultiplication {
 		} while(!isCorrect);
 
 		System.out.println("Table de multiplication de "+nbUser);
-		for (i=1;i<=9;i++) {
+		for (int i=1;i<=9;i++) {
 			result = i*nbUser;
 			System.out.println(i+" x "+nbUser+" = "+result);
 		}

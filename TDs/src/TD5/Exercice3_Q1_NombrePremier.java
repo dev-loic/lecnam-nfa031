@@ -16,11 +16,16 @@ public class Exercice3_Q1_NombrePremier {
 		} else {
 			diviseur=2;
 			while(diviseur<nbUser && premier) {
-				if(nbUser%diviseur==0) premier=false;
+				if(nbUser%diviseur==0) {
+					premier=false;
+				}
 				diviseur++;
 			}
-			if (premier) System.out.println(nbUser+" est premier!");
-			else System.out.println(nbUser+" n'est pas premier!");
+			if (premier) {
+				System.out.println(nbUser+" est premier!");
+			} else {
+				System.out.println(nbUser+" n'est pas premier!");
+			}
 		}
 		sc.close();
 	}

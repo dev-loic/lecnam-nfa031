@@ -7,10 +7,10 @@ public class Exo611 {
 		// Pour donner des arguments à un exe, cliquez sur la petite flèche
 		// A cote du bouton de Run classique (lecture vert), puis "Run Configurations" 
 		// Et enfin onglet "Argument". Vous pouvez alors préciser des arguments !
-		int i=0, sizeArgs=args.length, somme=0;
+		int sizeArgs=args.length, somme=0;
 		double moyenne=0.0;
 		
-		for (i=0;i<sizeArgs;i++) {
+		for (int i=0;i<sizeArgs;i++) {
 			somme+=Integer.parseInt(args[i]);
 		}
 		moyenne = ((double)somme)/sizeArgs;

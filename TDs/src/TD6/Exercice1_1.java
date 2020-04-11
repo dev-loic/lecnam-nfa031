@@ -7,13 +7,13 @@ public class Exercice1_1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int[] tab = {12, 15, 13, 10, 8, 9, 13, 14};
-		int nbToFind=0, i=0, sizeTab=tab.length;
+		int nbToFind=0, sizeTab=tab.length;
 		boolean found = false;
 		
 		System.out.print("Saisissez un nombre à rechercher : ");
 		nbToFind = sc.nextInt();
 		
-		for (i=0;i<sizeTab;i++) {
+		for (int i=0;i<sizeTab;i++) {
 			// on se contente ici de valuer un booléen si nbToFind est dans la tableau
 			// la boucle for poursuit quand même son exécution après avoir trouvé
 			// nbToFind

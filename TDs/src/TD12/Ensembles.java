@@ -77,8 +77,8 @@ public class Ensembles {
 	
 	static ArrayList<Integer> intersectionSet(ArrayList<Integer> iSet1,ArrayList<Integer> iSet2) {
 		ArrayList<Integer> intersectionSet = new ArrayList<Integer>();
-		int sizeSet1 = iSet1.size(), i=0;
-		for(i=0;i<sizeSet1;i++) {
+		int sizeSet1 = iSet1.size();
+		for(int i=0;i<sizeSet1;i++) {
 			if(iSet2.contains(iSet1.get(i))) { // on ajoute que sil est present dans les deux
 				intersectionSet.add(iSet1.get(i));
 			}

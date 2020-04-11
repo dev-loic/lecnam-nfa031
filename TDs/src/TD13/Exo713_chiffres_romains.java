@@ -9,11 +9,11 @@ public class Exo713_chiffres_romains {
 
 	// convertit un nombre (plusieurs chiffres) romain en entier
 	static int convertRomanNumberToInt(String iRomanNumber) {
-		int result = 0, sizeNumber=iRomanNumber.length(), i=0;
+		int result = 0, sizeNumber=iRomanNumber.length();
 		char nextLetter, curLetter;
 		int nextValue=0, curValue=0;
 		
-		for(i=sizeNumber-1;i>=0;i--) {
+		for(int i=sizeNumber-1;i>=0;i--) {
 			// On est oblige de calculer la lettre suivante, afin de faire les calculs inverses
 			// Ex1 : IX = 9 car I place devant X enleve 1 a 10
 			// Ex2 : XI = 11 car I place apres X ajoute 1 a 10 
@@ -41,9 +41,9 @@ public class Exo713_chiffres_romains {
 		char [] tabRomanChar         = {'I','V', 'X' ,'L', 'C' , 'D' , 'M'  };
 		int  [] tabIntCorrespondance = { 1 , 5 , 10  ,50 , 100 , 500 , 1000 };
 		int sizeTabs = tabRomanChar.length; // les deux ont la meme taille
-		int i=0, result=0;
+		int result=0;
 
-		for(i=0;i<sizeTabs;i++) {
+		for(int i=0;i<sizeTabs;i++) {
 			if(iRomanLetter==tabRomanChar[i]) {
 				result = tabIntCorrespondance[i];
 				break;

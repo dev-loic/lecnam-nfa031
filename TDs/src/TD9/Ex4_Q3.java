@@ -14,11 +14,11 @@ public class Ex4_Q3 {
 	}
 	
 	static boolean crossIsIn(char [] tab1, char [] tab2) {
-		int sizeTab1 = tab1.length, i=0;
+		int sizeTab1 = tab1.length;
 		boolean output = true;
 
 		// on parcourt le premier tableau en entier (tab1)
-		for (i=0;i<sizeTab1;i++) {
+		for (int i=0;i<sizeTab1;i++) {
 			// Pour chaque caractère présent dans un tab1,
 			// On teste s'il se trouve dans tab2 grâce à la méthode isIn
 			// Si ce n'est pas le cas, on sort

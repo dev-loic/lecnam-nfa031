@@ -60,8 +60,7 @@ public class Notes_tabStatic {
 	}
 
 	// ajouter une nouvelle note
-	static void addNewNote (int iNewNote, int iCoef)
-	{
+	static void addNewNote (int iNewNote, int iCoef) {
 		if (iNewNote<0) {
 			System.out.println("Note négative -> Non ajoutée");
 		} else if (iCoef<=0) {
@@ -74,39 +73,37 @@ public class Notes_tabStatic {
 
 	// afficher toutes les notes
 	static void displayNotes() {
-		int i=0, sizeNotes=TAB_NOTES.size();
+		int sizeNotes=TAB_NOTES.size();
 		System.out.println("Voici les notes de ce brave élève et les coefs correspondant : ");
-		for(i=0;i<sizeNotes;i++)
+		for(int i=0;i<sizeNotes;i++) {
 			System.out.print(TAB_NOTES.get(i)+" | ");
+		}
 		System.out.println();
-		for(i=0;i<sizeNotes;i++)
+		for(int i=0;i<sizeNotes;i++) {
 			System.out.print(TAB_COEFS.get(i)+" | ");
+		}
 		System.out.println();
 	}
 
 	// calculer la moyenne des notes 
-	static double notesAverage()
-	{
+	static double notesAverage() {
 		double moyenne=0.0, somme=0.0;
-		int i=0, size=TAB_NOTES.size(), sommeCoefs=0;
-
-		for(i=0;i<size;i++)
+		int size=TAB_NOTES.size(), sommeCoefs=0;
+		for(int i=0;i<size;i++) {
 			somme+=(TAB_NOTES.get(i))*TAB_COEFS.get(i);
-
-		for(i=0;i<size;i++)
+		}
+		for(int i=0;i<size;i++) {
 			sommeCoefs+=TAB_COEFS.get(i);
-
+		}
 		moyenne = ((int)((somme/sommeCoefs)*100))/100.;
 		return moyenne;
 	}
 
-	static void modifyNote (int iNoteToModify, int iNewNote, int iCoef)
-	{
+	static void modifyNote (int iNoteToModify, int iNewNote, int iCoef) {
 		int indexOfNoteToModify=-1;
-		if(!TAB_NOTES.contains(iNoteToModify)) 
+		if(!TAB_NOTES.contains(iNoteToModify)) {
 			System.out.println("Note non présente dans le tableau.");
-		else
-		{
+		} else {
 			indexOfNoteToModify=TAB_NOTES.indexOf(iNoteToModify);
 			TAB_NOTES.set(indexOfNoteToModify,iNewNote);
 			TAB_COEFS.set(indexOfNoteToModify,iCoef);

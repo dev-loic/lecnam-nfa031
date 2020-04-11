@@ -7,7 +7,7 @@ public class Exercice1_5 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int[] tab = {12, 15, 13, 10, 8, 9, 13, 14};
-		int index1=0, index2=-1, temp = 0, i=0, sizeTab=tab.length;
+		int index1=0, index2=-1, temp = 0, sizeTab=tab.length;
 		boolean error = true;
 		
 		do {
@@ -29,7 +29,7 @@ public class Exercice1_5 {
 		} while (error);
 
 		// On affiche le tableau avant 
-		for (i=0;i<sizeTab;i++) {
+		for (int i=0;i<sizeTab;i++) {
 			System.out.print(tab[i]+" | ");
 		}
 		System.out.println();
@@ -40,7 +40,7 @@ public class Exercice1_5 {
 		tab[index1]=tab[index2];
 		tab[index2]=temp;
 		// On affiche le tableau après 
-		for (i=0;i<sizeTab;i++) {
+		for (int i=0;i<sizeTab;i++) {
 			System.out.print(tab[i]+" | ");
 		}
 		sc.close();

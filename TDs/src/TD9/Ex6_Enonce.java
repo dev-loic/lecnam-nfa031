@@ -10,19 +10,19 @@ public class Ex6_Enonce {
 	}
 
 	static void afficheTable(int[] iTab) {
-		int size = iTab.length, i=0;
+		int size = iTab.length;
 		System.out.print('+');
-		for (i=0; i<size; i++){
+		for (int i=0; i<size; i++){
 			System.out.print("---+");
 		}
 		System.out.println();
 		System.out.print('|');
-		for (i=0; i<size; i++) {
+		for (int i=0; i<size; i++) {
 			System.out.print(" " + iTab[i] + " |");
 		}
 		System.out.println();
 		System.out.print('+');
-		for (i=0; i<size; i++) {
+		for (int i=0; i<size; i++) {
 			System.out.print("---+");
 		}
 		System.out.println();

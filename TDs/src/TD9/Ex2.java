@@ -17,7 +17,6 @@ public class Ex2 {
 		System.out.println("\n **Exemple 3**");
 		System.out.println("Attendu : (-3)^2=9 | Résultat : (-3)^2="+carre(ex3));
 		System.out.println("Attendu : (-3)^3=-27 | Résultat : (-3)^3="+cube(ex3));
-
 	}
 
 	static double carre(double a) {

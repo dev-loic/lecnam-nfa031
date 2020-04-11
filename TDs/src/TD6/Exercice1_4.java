@@ -7,7 +7,7 @@ public class Exercice1_4 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int[] tab = {12, 15, 13, 10, 8, 9, 13, 14};
-		int nbToInsert=0, indexToInsert=-1, i=0, sizeTab=tab.length;
+		int nbToInsert=0, indexToInsert=-1, sizeTab=tab.length;
 		boolean error = true;
 		
 		// Dans un premier temps, je demande le nb a inserer
@@ -29,14 +29,14 @@ public class Exercice1_4 {
 		} while (error);
 
 		// On affiche le tableau avant 
-		for (i=0;i<sizeTab;i++) {
+		for (int i=0;i<sizeTab;i++) {
 			System.out.print(tab[i]+" | ");
 		}
 		System.out.println();
 		// On change la valeur à l'indice sélectionné
 		tab[indexToInsert]=nbToInsert;
 		// On affiche le tableau après 
-		for (i=0;i<sizeTab;i++) {
+		for (int i=0;i<sizeTab;i++) {
 			System.out.print(tab[i]+" | ");
 		}
 		sc.close();

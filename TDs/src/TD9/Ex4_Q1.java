@@ -13,12 +13,12 @@ public class Ex4_Q1 {
 	}
 	
 	static boolean isIn (char iChar, char [] tabChar) {
-		int sizeTab = tabChar.length, i=0;
+		int sizeTab = tabChar.length;
 		boolean output = false;
 		
 		// On parcourt tout le tableau tabChar a la recherche de iChar
 		// Si on le trouve, on value la sortie et on arrête la boucle
-		for (i=0;i<sizeTab;i++) {
+		for (int i=0;i<sizeTab;i++) {
 			if (tabChar[i]==iChar) {
 				output = true;
 				break;

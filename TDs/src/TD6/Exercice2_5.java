@@ -6,7 +6,7 @@ public class Exercice2_5 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int i=0, sizeTab = 0;
+		int sizeTab = 0;
 		boolean error = true;
 		
 		// On demande à l'utilisateur la taille souhaitée pour son tableau
@@ -21,13 +21,13 @@ public class Exercice2_5 {
 		
 		// On peut alors initialiser notre tableau
 		char [] tab = new char[sizeTab];
-		for (i=0;i<sizeTab;i++) {
+		for (int i=0;i<sizeTab;i++) {
 			System.out.print("Saisissez un caractère : ");
 			tab[i]=sc.nextLine().charAt(0);
 		}
 		
 		// On affiche le tableau
-		for (i=0;i<sizeTab;i++) {
+		for (int i=0;i<sizeTab;i++) {
 			System.out.print(tab[i]+" | ");
 		}
 		sc.close();

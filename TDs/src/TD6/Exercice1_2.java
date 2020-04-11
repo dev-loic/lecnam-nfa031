@@ -7,12 +7,12 @@ public class Exercice1_2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int[] tab = {12, 15, 13, 10, 8, 9, 13, 14};
-		int nbToFind=0, indexNbToFind=-1, i=0, sizeTab=tab.length;
+		int nbToFind=0, indexNbToFind=-1, sizeTab=tab.length;
 		
 		System.out.print("Saisissez un nombre à rechercher : ");
 		nbToFind = sc.nextInt();
 		
-		for (i=0;i<sizeTab;i++) {
+		for (int i=0;i<sizeTab;i++) {
 			// Plus besoin de booléen, si indexNbToFind change de sa valeur initiale,
 			// On sait que nbToFind a été trouvé
 			// Remarquez que s'il est trouvé plusieurs fois, 

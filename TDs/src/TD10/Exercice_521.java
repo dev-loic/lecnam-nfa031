@@ -27,8 +27,8 @@ public class Exercice_521 {
 	}
 	
 	static int sommeCarresIteratif (int n) {
-		int somme = 0, i=0;	
-		for (i=0;i<=n;i++) {
+		int somme = 0;	
+		for (int i=0;i<=n;i++) {
 			somme+=i*i;
 		}	
 		return somme;

@@ -63,9 +63,9 @@ public class Notes_Q3 {
 
 	// Afficher toutes les notes
 	static void displayNotes(ArrayList<Integer> iTabNotes) {
-		int i=0, sizeNotes=iTabNotes.size();
+		int sizeNotes=iTabNotes.size();
 		System.out.println("Voici les notes de ce brave élève : ");
-		for(i=0;i<sizeNotes;i++) {
+		for(int i=0;i<sizeNotes;i++) {
 			System.out.print(iTabNotes.get(i)+" | ");
 		}
 		System.out.println();
@@ -74,8 +74,8 @@ public class Notes_Q3 {
 	// Calculer la moyenne des notes 
 	static double notesAverage(ArrayList<Integer> iTabNotes) {
 		double moyenne=0.0, somme=0.0;
-		int i=0, sizeNotes=iTabNotes.size();
-		for(i=0;i<sizeNotes;i++) {
+		int sizeNotes=iTabNotes.size();
+		for(int i=0;i<sizeNotes;i++) {
 			somme+=iTabNotes.get(i);
 		}
 		moyenne = ((int)((somme/sizeNotes)*100))/100.;

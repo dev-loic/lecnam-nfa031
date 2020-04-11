@@ -6,8 +6,7 @@ public class Exercice3_Q2_PremiersPremiers {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int nbPremiers = 0, count = 0, diviseur=2, curNb=2;
-		Boolean premier = true;
+		int nbPremiers = 0, count = 0, curNb=2;
 
 		System.out.println("**Bienvenue dans un programme qui affiche des nombres premiers**");
 		// j'ai décidé d'ajouter la possibilité de saisir le nb d'entiers premiers que l'on souhaite
@@ -15,10 +14,12 @@ public class Exercice3_Q2_PremiersPremiers {
 		System.out.print("Saisissez le nombre d'entiers premiers que vous souhaitez : ");
 		nbPremiers = sc.nextInt();
 		
-		System.out.println("Voici les "+nbPremiers+" premiers nombres premiers !\n");
+		System.out.println("\nVoici les "+nbPremiers+" premiers nombres premiers !");
 		
 		// On installe un compteur qui va nous permettre de maitriser le nombre d'entiers premiers trouvés
 		while (count<nbPremiers) {
+			int diviseur = 2;
+			boolean premier = true;
 			// Pour chaque curNb on parcourt les nbs compris entre 2 et curNb-1
 			while (diviseur<curNb && premier) {
 				if(curNb%diviseur==0) premier=false;
@@ -29,9 +30,7 @@ public class Exercice3_Q2_PremiersPremiers {
 				System.out.print(curNb+","); 
 				count++; 
 			}
-			// On n'oublie pas de remettre diviseur à 2, premier à true et d'augmenter curNb
-			diviseur=2;
-			premier=true;
+			// On n'oublie pas d'incrémenter curNb de 1
 			curNb++;
 		}
 		sc.close();

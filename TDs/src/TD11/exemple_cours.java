@@ -11,8 +11,9 @@ public class exemple_cours {
 		String chaine3 = new String(tabChar);
 		// chaine3="abc";
 		
-		for(int i=0;i<tabChar.length;i++)
+		for(int i=0;i<tabChar.length;i++) {
 			System.out.print(tabChar[i]);
+		}
 		
 		System.out.println();
 		System.out.println(chaine3);
@@ -29,9 +30,7 @@ public class exemple_cours {
 		System.out.println(chaine3);
 		
 		char [] tabChar2;
-		
 		tabChar2=tabChar;
-		
 		tabChar2[1]='4';
 		for(int i=0;i<tabChar.length;i++) {
 			System.out.print(tabChar[i]);

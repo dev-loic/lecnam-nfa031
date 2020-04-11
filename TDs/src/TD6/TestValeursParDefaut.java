@@ -4,7 +4,6 @@ public class TestValeursParDefaut {
 
 	public static void main(String[] args) {
 		
-		
 		// Tableau d'entiers
 		int [] tabInt = new int[10];
 		int sizeTab = tabInt.length;
@@ -15,7 +14,7 @@ public class TestValeursParDefaut {
 		System.out.println();
 		
 		
-		// Tableau de caractèresc
+		// Tableau de caractères
 		char [] tabChar = new char[10];
 		for (int i=0;i<tabChar.length;i++) {
 			System.out.print(tabChar[i]+" | ");

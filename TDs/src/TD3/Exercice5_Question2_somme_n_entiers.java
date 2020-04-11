@@ -12,7 +12,7 @@ public class Exercice5_Question2_somme_n_entiers {
 		// On recupère le nombre d'entiers que l'user veut additionner
 		System.out.print("Saisissez le nombre d'entiers souhaités : ");
 		n = sc.nextInt();
-		
+
 		for (int i=1;i<=n;i++) {
 			somme=somme+i;
 		}

@@ -6,7 +6,7 @@ public class Exercice3 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int nbSommes = 0, i = 0;
+		int nbSommes = 0;
 		double [] tabEuros, tabFrancs;
 		double curSomme = 0.0;
 		
@@ -19,14 +19,14 @@ public class Exercice3 {
 		tabFrancs = new double [nbSommes];
 		
 		// Saisie des sommes en euros
-		for (i=0;i<nbSommes;i++) {
+		for (int i=0;i<nbSommes;i++) {
 			System.out.print("Saisissez votre " + (i+1) + "e somme en euros : ");
 			tabEuros[i]=sc.nextDouble();
 		}
 		
 		// Conversion 
 		// Un EUR est équivalent à 6.55957 FRF
-		for (i=0;i<nbSommes;i++) {
+		for (int i=0;i<nbSommes;i++) {
 			// ce calcul permet de ne conserver que 2 chiffres après la virgule
 			// il existe également des fonctions que je vous invite à trouver sur internet ;) 
 			curSomme = ((int)(tabEuros[i]*6.55957*100)/100.);
@@ -35,7 +35,7 @@ public class Exercice3 {
 		 
 		// On affiche les résultats
 		// Rque : cette boucle peut être intégrée à la boucle précédente
-		for (i=0;i<nbSommes;i++) {
+		for (int i=0;i<nbSommes;i++) {
 			System.out.println(tabEuros[i] + " € vaut " + tabFrancs[i] + " Francs.");
 		}
 		sc.close();

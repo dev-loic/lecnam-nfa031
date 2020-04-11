@@ -15,25 +15,18 @@ public class SapinAvecArgs {
 				System.out.println("Vous avez demandé un sapin de "+args[0]+" lignes de haut!");
 				N = Integer.parseInt(args[0]);
 				
-				// On construit les éléments de la première ligne 
-				for (iEspaces=1;iEspaces<=N-1;iEspaces++) {
-					patternEspaces+=" ";
+				String spaces = "";
+				String stars = "*";
+				for(int i=1; i<=N-1; i++) {
+					spaces = spaces + " ";
 				}
-				patternEtoiles="*";
-
-				while (ligne<=N) {
-					System.out.println(patternEspaces+patternEtoiles);
-
-					// on met à jour les pattern
-					// Attention pour la derniere ligne, le pattern d espaces est vide
-					// String test = "cnam";
-					// test.substring(1) => nam
-					if (ligne!=N) patternEspaces=patternEspaces.substring(1);
-					patternEtoiles+="**";		
-
-					// on passe à la ligne suivante 
-					ligne++;
-				}		
+				for (int i=1; i<=N; i++) {
+					System.out.println(spaces+stars);
+					if(spaces.length()!=0) {
+						spaces = spaces.substring(1);
+					}
+					stars = stars + "**";
+				}
 			}
 		} catch (Exception e) {
 			System.out.print(e);

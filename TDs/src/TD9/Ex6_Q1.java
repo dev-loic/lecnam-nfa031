@@ -10,21 +10,21 @@ public class Ex6_Q1 {
 	}
 
 	static void afficheTable(int[] iTab) {
-		int size = iTab.length, i=0;
+		int size = iTab.length;
 		System.out.print('+');
-		for (i=0; i<size; i++) {
+		for (int i=0; i<size; i++) {
 			// on fait appel à notre méthode, qui génère un certain nombre de tirets
 			// En fonction de l'entier à afficher juste en dessous
 			System.out.print("-"+adaptiveDash(iTab[i])+"-+");
 		}
 		System.out.println();
 		System.out.print('|');
-		for (i=0; i<size; i++) {
+		for (int i=0; i<size; i++) {
 			System.out.print(" " + iTab[i] + " |");
 		}
 		System.out.println();
 		System.out.print('+');
-		for (i=0; i<size; i++) {
+		for (int i=0; i<size; i++) {
 			System.out.print("-"+adaptiveDash(iTab[i])+"-+");
 		}
 		System.out.println();

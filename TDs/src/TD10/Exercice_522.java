@@ -56,11 +56,10 @@ public class Exercice_522 {
 	static void lireTableau(int [][] tabSondage) {
 		String [] labelLignes = {"d'hommes", "de femmes"};
 		String [] labelColonnes = {"oui", "non", "absention"};
-		int iLigne=0, iColonne=0;
 		int nbLignes = tabSondage.length, nbColonnes=tabSondage[0].length;
 		
-		for (iLigne=0;iLigne<nbLignes;iLigne++) {
-			for (iColonne=0;iColonne<nbColonnes;iColonne++) {
+		for (int iLigne=0;iLigne<nbLignes;iLigne++) {
+			for (int iColonne=0;iColonne<nbColonnes;iColonne++) {
 				System.out.print("Saisissez le nombre "+labelLignes[iLigne]+ " qui ont voté "+labelColonnes[iColonne]+ " : ");
 				tabSondage[iLigne][iColonne]=sc.nextInt();
 			}
@@ -70,12 +69,11 @@ public class Exercice_522 {
 	static void afficherTableau(int [][] tabSondage) {
 		String [] labelLignes = {"hommes", "femmes"};
 		String [] labelColonnes = {"oui", "non", "absention"};
-		int iLigne=0, iColonne=0;
 		int nbLignes = tabSondage.length, nbColonnes=tabSondage[0].length;
 		
-		for (iLigne=0;iLigne<nbLignes;iLigne++) {
+		for (int iLigne=0;iLigne<nbLignes;iLigne++) {
 			System.out.print(labelLignes[iLigne]+" : ");
-			for (iColonne=0;iColonne<nbColonnes;iColonne++) {
+			for (int iColonne=0;iColonne<nbColonnes;iColonne++) {
 				System.out.print(labelColonnes[iColonne]+"-->"+tabSondage[iLigne][iColonne] + " | ");
 			}
 			System.out.println();
@@ -84,8 +82,8 @@ public class Exercice_522 {
 	}
 	
 	static int nbFemmesSondage(int [][] tabSondage) {
-		int nbFemmes=0, i=0, sizeTypeDeVote=tabSondage[1].length; // idem que tabSondage[0].length
-		for (i=0;i<sizeTypeDeVote;i++) {
+		int nbFemmes=0, sizeTypeDeVote=tabSondage[1].length; // idem que tabSondage[0].length
+		for (int i=0;i<sizeTypeDeVote;i++) {
 			// on prend la ligne 1
 			nbFemmes+=tabSondage[1][i];
 		}
@@ -93,8 +91,8 @@ public class Exercice_522 {
 	}
 	
 	static int nbHommesSondage(int [][] tabSondage) {
-		int nbHommes=0, i=0, sizeTypeDeVote=tabSondage[0].length; // idem que tabSondage[0].length
-		for (i=0;i<sizeTypeDeVote;i++) {
+		int nbHommes=0, sizeTypeDeVote=tabSondage[0].length; // idem que tabSondage[0].length
+		for (int i=0;i<sizeTypeDeVote;i++) {
 			// on prend la ligne 0
 			nbHommes+=tabSondage[0][i];
 		}
@@ -105,8 +103,8 @@ public class Exercice_522 {
 	// intention=1 => non
 	// intention=2 => absention
 	static int nbPersIntentionDeVote(int [][] tabSondage, int intention) {
-		int nbPers = 0, sizeNbGender = tabSondage.length, i=0;
-		for (i=0;i<sizeNbGender;i++) {
+		int nbPers = 0, sizeNbGender = tabSondage.length;
+		for (int i=0;i<sizeNbGender;i++) {
 			nbPers+=tabSondage[i][intention];
 		}
 		return nbPers;

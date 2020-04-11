@@ -17,7 +17,7 @@ public class Exercice2_Q3 {
 		String userDay;
 		String [] jours = {"lundi","mardi","mercredi","jeudi","vendredi"};
 		String [] plages = {"8h-9h ","9h-10h","10h-11h","11h-12h","13h-14h","14h-15h","15h-16h","16h-17h","17h-18h","18h-19h"};
-		int iJour=0, iPlage=0, nbJours=occupee.length, nbPlages=occupee[0].length, userSlot=0;
+		int iJour=0, nbJours=occupee.length, nbPlages=occupee[0].length, userSlot=0;
 		boolean found = false, success = false;
 
 		do {
@@ -37,7 +37,7 @@ public class Exercice2_Q3 {
 			
 			// Saisie de la plage
 			System.out.println("Pour "+jours[iJour]+" il reste les plages suivantes : ");
-			for(iPlage=0;iPlage<nbPlages;iPlage++) {
+			for(int iPlage=0;iPlage<nbPlages;iPlage++) {
 				if(!occupee[iJour][iPlage]) {
 					System.out.println((iPlage+1)+" - "+plages[iPlage]);
 				}

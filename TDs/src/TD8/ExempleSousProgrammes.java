@@ -4,15 +4,15 @@ public class ExempleSousProgrammes {
 
 	public static void main(String[] args) {
 		int [] tab = {1,2,3,4,5};
-		int size = tab.length, i=0, j=size-1, temp=0;
+		int size = tab.length, j=size-1, temp=0;
 		
 		// Premier affichage du tableau
-		for (i=0;i<size;i++) {
+		for (int i=0;i<size;i++) {
 			System.out.print(tab[i]+" | ");
 		}
 		
 		// Inversion du tableau
-		for (i=0;i<size/2;i++) {
+		for (int i=0;i<size/2;i++) {
 			temp=tab[i];
 			tab[i]=tab[j];
 			tab[j]=temp;
@@ -21,7 +21,7 @@ public class ExempleSousProgrammes {
 		
 		System.out.println();
 		// Deuxième affichage du tableau
-		for (i=0;i<size;i++) {
+		for (int i=0;i<size;i++) {
 			System.out.print(tab[i]+" | ");
 		}
 	}

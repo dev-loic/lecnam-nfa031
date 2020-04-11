@@ -7,10 +7,10 @@ public class Exercice2_2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int [] tab = new int[6];
-		int i=0, max = 0;
+		int max = 0;
 
 		// on remplit le tableau 
-		for (i=0;i<6;i++) {
+		for (int i=0;i<6;i++) {
 			System.out.print("Saisissez un entier : ");
 			tab[i]=sc.nextInt();
 		}
@@ -19,7 +19,7 @@ public class Exercice2_2 {
 		// Ceci nous économise  une boucle FOR
 		System.out.println("Voici votre tableau : ");
 		max = tab[0];
-		for (i=0;i<6;i++) {
+		for (int i=0;i<6;i++) {
 			System.out.print(tab[i]+" | ");
 			if (tab[i]>max) {
 				max = tab[i];

@@ -60,7 +60,7 @@ public class Exo614 {
 		Scanner sc = new Scanner (System.in);
 		String saisieUser = "";
 		boolean quit=false;
-		int somme=0, i=0, numCase=0, nbNotes=0, nbNotesMax=20;
+		int somme=0, numCase=0, nbNotes=0, nbNotesMax=20;
 		int [] tabNotes = new int [nbNotesMax];
 		double moyenne=0.0;
 		
@@ -97,7 +97,7 @@ public class Exo614 {
 		
 		afficheTab(tabNotes);
 		
-		for(i=0;i<nbNotesMax;i++) {
+		for(int i=0;i<nbNotesMax;i++) {
 			if (tabNotes[i]!=-1) {
 				somme+=tabNotes[i];
 			}
@@ -111,7 +111,7 @@ public class Exo614 {
 		Scanner sc = new Scanner (System.in);
 		String saisieUser = "";
 		boolean quit=false;
-		int somme=0, i=0, numCase=0, nbNotes=0, nbNotesMax=20;
+		int somme=0, numCase=0, nbNotes=0, nbNotesMax=20;
 		int [] tabNotes = new int [nbNotesMax];
 		boolean [] tabNoteEntree = new boolean [nbNotesMax]; // par defaut toutes les cases sont à false
 		double moyenne=0.0;
@@ -143,7 +143,7 @@ public class Exo614 {
 		
 		afficheTab(tabNotes);
 		
-		for(i=0;i<nbNotesMax;i++) {
+		for(int i=0;i<nbNotesMax;i++) {
 			if (tabNotes[i]!=-1) {
 				somme+=tabNotes[i];
 			}

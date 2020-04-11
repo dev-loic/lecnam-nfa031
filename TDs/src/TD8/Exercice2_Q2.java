@@ -14,15 +14,15 @@ public class Exercice2_Q2 {
 					{true,true,false,true,false,true,true,false,true,true}, 
 					{false,true,false,true,false,true,true,false,false,false}
 			};
-		int iJour=0, iPlage=0, nbJours=occupee.length, nbPlages=occupee[0].length, countOccupation=0;
+		int nbJours=occupee.length, nbPlages=occupee[0].length, countOccupation=0;
 		double nbPlagesTotal = nbPlages*nbJours;
 
 		System.out.println(" ** Taux d'occupation des salles ** ");
 
 		// on parcourt tous les jours
-		for (iJour=0;iJour<nbJours;iJour++) {
+		for (int iJour=0;iJour<nbJours;iJour++) {
 			// on parcourt toutes les plages pour chaque jour
-			for (iPlage=0;iPlage<nbPlages;iPlage++) {
+			for (int iPlage=0;iPlage<nbPlages;iPlage++) {
 				if(occupee[iJour][iPlage])
 					countOccupation++;
 			}
