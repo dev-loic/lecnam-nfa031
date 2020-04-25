@@ -23,10 +23,17 @@ public class Exercice4_2 {
 		do {
 			// Nb de caractères à ajouter + Indice où il souhaite ajouter ces valeurs
 			System.out.print("\nCombien de caractères souhaitez-vous ajouter ? ");
-			nbToAdd = sc.nextInt();
-			System.out.print("Où souhaitez-vous les ajouter ? ");
-			indexToAdd = sc.nextInt();
-			sc.nextLine();
+			nbToAdd = Integer.parseInt(sc.nextLine());
+			boolean indexIsCorrect = false;
+			do {
+				System.out.print("Où souhaitez-vous les ajouter ? ");
+				indexToAdd = Integer.parseInt(sc.nextLine());
+				if (indexToAdd<0 || indexToAdd>tabInitial.length) {
+					System.out.print("L'indice saisi n'est pas correct");
+					continue;
+				}
+				indexIsCorrect = true;
+			} while (!indexIsCorrect);
 
 			// Création du nouveau tableau
 			newSize = initialSize+nbToAdd;
