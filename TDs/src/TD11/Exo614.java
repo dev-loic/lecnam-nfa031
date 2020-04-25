@@ -65,7 +65,7 @@ public class Exo614 {
 		double moyenne=0.0;
 		
 		// on initialise notre tableau avec que des -1
-		for (i=0;i<20;i++) {
+		for (int i=0;i<20;i++) {
 			tabNotes[i]=-1;
 		}
 				

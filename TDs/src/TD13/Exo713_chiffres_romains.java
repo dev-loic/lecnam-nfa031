@@ -40,10 +40,10 @@ public class Exo713_chiffres_romains {
 	static int convertRomanLetterToInt (char iRomanLetter) {
 		char [] tabRomanChar         = {'I','V', 'X' ,'L', 'C' , 'D' , 'M'  };
 		int  [] tabIntCorrespondance = { 1 , 5 , 10  ,50 , 100 , 500 , 1000 };
-		int sizeTabs = tabRomanChar.length; // les deux ont la meme taille
+		int sizeTabs = tabRomanChar.length, i = 0; // les deux ont la meme taille
 		int result=0;
 
-		for(int i=0;i<sizeTabs;i++) {
+		for(i=0;i<sizeTabs;i++) {
 			if(iRomanLetter==tabRomanChar[i]) {
 				result = tabIntCorrespondance[i];
 				break;
