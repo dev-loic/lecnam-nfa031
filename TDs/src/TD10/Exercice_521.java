@@ -16,14 +16,12 @@ public class Exercice_521 {
 	// 0^2 + 1^2 + 2^2
 	// 0^2 + 1^2
 	// 0^2	
-	static int sommeCarresRecursif (int n) {
-		int somme = 0;		
+	static int sommeCarresRecursif (int n) {	
 		if (n==0) {
-			somme = 0;
+			return 0;
 		} else {
-			somme = sommeCarresRecursif(n-1) + n*n;		
+			return sommeCarresRecursif(n-1) + n*n;		
 		}
-		return somme;
 	}
 	
 	static int sommeCarresIteratif (int n) {
