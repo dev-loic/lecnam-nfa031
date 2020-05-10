@@ -41,7 +41,7 @@ public class RandomMastermind {
 	static boolean isIn(String iStringToFind, String [] iTab) {
 		int size = iTab.length;
 		for(int i=0;i<size;i++) {
-			if(iStringToFind.equals(iTab[i])) return true;
+			if(iStringToFind.equalsIgnoreCase(iTab[i])) return true;
 		}
 		return false;
 	}
