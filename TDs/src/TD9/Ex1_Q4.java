@@ -4,6 +4,27 @@ import java.util.Scanner;
 
 public class Ex1_Q4 {
 	
+	public static void main(String[] args) {
+		int x=0, y=0, result=-1;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Entrez la valeur de x : ");
+		x = Integer.parseInt(sc.nextLine());
+
+		System.out.print("Entrez la valeur de y : ");
+		y = Integer.parseInt(sc.nextLine());
+
+		result = divisionEntiere(x,y);
+
+		if (result==Integer.MIN_VALUE) {
+			System.out.println("Le programme a rencontré une erreur.");
+		} else {
+			System.out.println(x+"/"+y+" = "+result);
+		}
+
+		sc.close();
+	}
+	
 	static int divisionEntiere(int x,int y) {
 		int result=0, current=Math.abs(x), signe=1;
 		if (y==0) {
@@ -33,26 +54,5 @@ public class Ex1_Q4 {
 		}
 		// On retourne alors le résultat affublé du signe calculé précedemment
 		return signe*result;
-	}
-	
-	public static void main(String[] args) {
-		int x=0, y=0, result=-1;
-		Scanner sc = new Scanner(System.in);
-
-		System.out.print("Entrez la valeur de x : ");
-		x = Integer.parseInt(sc.nextLine());
-
-		System.out.print("Entrez la valeur de y : ");
-		y = Integer.parseInt(sc.nextLine());
-
-		result = divisionEntiere(x,y);
-
-		if (result==Integer.MIN_VALUE) {
-			System.out.println("Le programme a rencontré une erreur.");
-		} else {
-			System.out.println(x+"/"+y+" = "+result);
-		}
-
-		sc.close();
 	}
 }

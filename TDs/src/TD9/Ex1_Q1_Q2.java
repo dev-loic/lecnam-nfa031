@@ -8,15 +8,6 @@ public class Ex1_Q1_Q2 {
 	
 	// Question 2 : Creation d une fonction divisionEntiere
 	
-	static int divisionEntiere(int x,int y) {
-		int result=0, current=x;
-		while(current>=y) {
-			current-=y; // current = current-y
-			result+=1; // result = result+1
-		}
-		return result;
-	}
-	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int x=0, y=0;
@@ -32,5 +23,14 @@ public class Ex1_Q1_Q2 {
 		System.out.println(x+"/"+y+" = "+result);
 	
 		sc.close();
+	}
+	
+	static int divisionEntiere(int x,int y) {
+		int result=0, current=x;
+		while(current>=y) {
+			current-=y; // current = current-y
+			result+=1; // result = result+1
+		}
+		return result;
 	}
 }

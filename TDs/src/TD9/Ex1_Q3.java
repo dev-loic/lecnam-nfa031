@@ -8,20 +8,6 @@ public class Ex1_Q3 {
 	// En informatique, laisser cette possibilite est risquee
 	// En effet, le resultat explose ce qui peut causer de serieux dommages dans les programmes.
 	
-	static int divisionEntiere(int x,int y) {
-		int result=0, current=x;	
-		if (y==0) {
-			System.out.println("La division par 0 est impossible !!! ");
-			return -1;
-		}
-		
-		while(current>=y) {
-			current-=y; // current = current-y
-			result+=1; // result = result+1
-		}
-		return result;
-	}
-	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int x=0, y=0, result=-1;
@@ -41,5 +27,19 @@ public class Ex1_Q3 {
 		}
 
 		sc.close();
+	}
+	
+	static int divisionEntiere(int x,int y) {
+		int result=0, current=x;	
+		if (y==0) {
+			System.out.println("La division par 0 est impossible !!! ");
+			return -1;
+		}
+		
+		while(current>=y) {
+			current-=y; // current = current-y
+			result+=1; // result = result+1
+		}
+		return result;
 	}
 }
