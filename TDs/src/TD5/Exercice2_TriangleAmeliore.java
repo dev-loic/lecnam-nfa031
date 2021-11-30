@@ -2,7 +2,7 @@ package TD5;
 
 import java.util.Scanner;
 
-// Version 2.0 : on optimise les performances en ne perfant aucune notion fonctionnelle
+// Version 2.0 : on optimise les performances en ne perdant aucune notion fonctionnelle
 
 public class Exercice2_TriangleAmeliore {
 

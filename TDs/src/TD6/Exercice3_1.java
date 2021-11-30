@@ -18,7 +18,7 @@ public class Exercice3_1 {
 		System.out.println("Le tableau saisi est le suivant : ");
 		for (int i=0;i<10;i++) {
 			System.out.print(tab[i]+" | ");
-			if (('a'<=tab[i] && 'z'>=tab[i]) || ('A'<=tab[i] && 'z'>=tab[i])) {
+			if (('a'<=tab[i] && 'z'>=tab[i]) || ('A'<=tab[i] && 'Z'>=tab[i])) {
 				countLetter++;
 			}
 			if ('A'<=tab[i] && 'Z'>=tab[i]) { 
